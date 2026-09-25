@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -9,6 +9,27 @@ export default function Home() {
   const [briefOpen, setBriefOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "error">("idle");
+  const prompted = useRef(false);
+
+  useEffect(() => {
+    let timer = 0;
+    const onScroll = () => {
+      const work = document.getElementById("work");
+      const trigger = work ? work.offsetTop - window.innerHeight * 0.18 : window.innerHeight * 1.8;
+      if (prompted.current || window.scrollY <= trigger) return;
+      prompted.current = true;
+      timer = window.setTimeout(() => {
+        setSent(false);
+        setFormStatus("idle");
+        setBriefOpen(true);
+      }, 650);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -22,14 +43,42 @@ export default function Home() {
 
   useEffect(() => {
     if (!briefOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const root = document.documentElement;
+    const body = document.body;
+    const scrollY = window.scrollY;
+    const scrollbarWidth = Math.max(0, window.innerWidth - root.clientWidth);
+    const previousRootOverflow = root.style.overflow;
+    const previousBodyStyles = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      width: body.style.width,
+      overflow: body.style.overflow,
+      paddingRight: body.style.paddingRight,
+    };
+
+    root.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
+
     return () => {
-      document.body.style.overflow = previousOverflow;
+      const previousScrollBehavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      root.style.overflow = previousRootOverflow;
+      Object.assign(body.style, previousBodyStyles);
+      window.scrollTo(0, scrollY);
+      root.style.scrollBehavior = previousScrollBehavior;
     };
   }, [briefOpen]);
 
   const openBrief = () => {
+    prompted.current = true;
     setSent(false);
     setFormStatus("idle");
     setBriefOpen(true);
@@ -134,7 +183,7 @@ export default function Home() {
               {!sent ? (
                 <>
                   <p>Материалы по кейсу / ALTERA</p>
-                  <h2 id="brief-title">ПОЛУЧИТЬ<br /><i>РАЗБОР?</i></h2>
+                  <h2 id="brief-title">ИДЕИ ДЛЯ<br /><i>ВАШЕГО БРЕНДА?</i></h2>
                   <form onSubmit={submitBrief}>
                     <p className="brief-lead">Отправим подборку приёмов из кейса и обсудим, как развить визуальный язык вашего бренда.</p>
                     <input className="website-field" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
@@ -142,7 +191,7 @@ export default function Home() {
                     <label>Как с вами связаться?<input name="contact" autoComplete="email" placeholder="Email или Telegram" required /></label>
                     <label>Что вам интересно?<select name="service" defaultValue="Разбор айдентики"><option>Разбор айдентики</option><option>Сайт бренда</option><option>Кампания / арт-дирекшн</option><option>Полный запуск</option></select></label>
                     <label className="consent-row"><input name="consent" type="checkbox" required /><span>Соглашаюсь на обработку персональных данных</span></label>
-                    <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить материалы"} <b>↗</b></button>
+                    <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить подборку приёмов"} <b>↗</b></button>
                     {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.ru</small>}
                     <small>Никакой рассылки — только материалы по кейсу и ответ по вашему запросу.</small>
                   </form>
