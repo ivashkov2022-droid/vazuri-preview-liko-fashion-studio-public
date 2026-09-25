@@ -88,12 +88,18 @@ a { color: inherit; }
 .brief-form h2 { margin: 0; font-family: Impact, sans-serif; font-size: clamp(55px, 5vw, 76px); line-height: .8; letter-spacing: -1px; }
 .brief-form h2 i { color: var(--orange); font-style: normal; }
 .brief-form form { display: grid; gap: 17px; margin-top: 37px; }
+.brief-form .brief-lead { margin: -10px 0 6px; color: #5e5952; font-size: 12px; line-height: 1.45; }
 .brief-form label { display: grid; gap: 7px; color: #6c6861; font-size: 7px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
 .brief-form input, .brief-form select { min-height: 43px; padding: 0 0 9px; border: 0; border-bottom: 1px solid #aaa59c; border-radius: 0; outline: 0; background: transparent; color: var(--ink); font-size: 14px; }
+.brief-form .website-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.brief-form .consent-row { align-items: center; display: flex; gap: 10px; }
+.brief-form .consent-row input { accent-color: var(--orange); flex: 0 0 auto; min-height: 0; width: 17px; height: 17px; }
+.brief-form .consent-row span { line-height: 1.35; }
 .brief-form input:focus, .brief-form select:focus { border-bottom-color: var(--orange); }
 .brief-form form > button, .brief-success button { min-height: 58px; margin-top: 4px; padding: 0 22px; display: flex; align-items: center; justify-content: space-between; border: 0; background: var(--ink); color: #fff; font-size: 9px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
 .brief-form form > button b { color: var(--acid); }
 .brief-form form > small { color: #98928a; font-size: 7px; line-height: 1.4; }
+.brief-form form > .form-error { color: #b52c18; font-size: 8px; }
 .brief-success > span { width: 55px; height: 55px; display: grid; place-items: center; margin-bottom: 34px; border-radius: 50%; background: var(--acid); font-size: 22px; }
 .brief-success button { width: 100%; margin-top: 34px; }
 @keyframes fade { from { opacity: 0; } }

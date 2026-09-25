@@ -6,37 +6,64 @@ import { FormEvent, useEffect, useState } from "react";
 export default function Home() {
   const [briefOpen, setBriefOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "error">("idle");
 
   useEffect(() => {
-    let opened = false;
-    const onScroll = () => {
-      const work = document.getElementById("work");
-      const trigger = work ? work.offsetTop - window.innerHeight * 0.18 : window.innerHeight * 1.8;
-      if (!opened && window.scrollY > trigger) {
-        opened = true;
-        setBriefOpen(true);
-      }
-    };
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setBriefOpen(false);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("keydown", onKey);
     return () => {
-      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("keydown", onKey);
     };
   }, []);
 
+  useEffect(() => {
+    if (!briefOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [briefOpen]);
+
   const openBrief = () => {
     setSent(false);
+    setFormStatus("idle");
     setBriefOpen(true);
   };
 
-  const submitBrief = (event: FormEvent<HTMLFormElement>) => {
+  const submitBrief = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSent(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    setFormStatus("sending");
+
+    try {
+      await fetch("https://vazuri.ru/lead.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "behance",
+          website: data.get("website") || "",
+          name: data.get("name") || "",
+          contact: data.get("contact") || "",
+          company: "",
+          message: `Материалы по кейсу ALTERA. Интерес: ${data.get("service") || "разбор айдентики"}.`,
+          consent: data.get("consent") || "",
+        }),
+      }).then((response) => {
+        if (!response.ok) throw new Error("send_failed");
+      });
+      form.reset();
+      setSent(true);
+      setFormStatus("idle");
+    } catch {
+      setFormStatus("error");
+    }
   };
+
+  const showWork = () => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <main>
@@ -46,7 +73,7 @@ export default function Home() {
         <header className="header">
           <a className="brand" href="#home" aria-label="Altera — на главную"><b>ALT</b><i>●</i><b>ERA</b></a>
           <nav aria-label="Основная навигация"><a href="#studio">Studio</a><a href="#work">Work</a><a href="#services">Services</a></nav>
-          <button type="button" className="round-menu" onClick={openBrief} aria-label="Обсудить проект"><span /><span /></button>
+          <button type="button" className="round-menu" onClick={showWork} aria-label="Перейти к выбранным работам"><span /><span /></button>
         </header>
 
         <div className="hero-title" aria-label="Fashion and branding">
@@ -56,7 +83,7 @@ export default function Home() {
         <div className="hero-side"><span>Independent identity studio</span><span>Moscow · Berlin</span></div>
         <div className="hero-bottom">
           <p>We make fashion brands impossible to scroll past.</p>
-          <button type="button" onClick={openBrief}>Start a project <b>↗</b></button>
+          <button type="button" onClick={showWork}>View the work <b>↘</b></button>
           <span>Scroll to discover ↓</span>
         </div>
         <div className="issue-stamp"><small>AL/26</small><b>NEW<br />IDENTITY</b></div>
@@ -93,7 +120,7 @@ export default function Home() {
             <div className="project-meta"><span>03 / Editorial</span><h3>SOFT ARMOUR</h3><b>↗</b></div>
           </article>
         </div>
-        <div className="services" id="services"><span>Brand strategy</span><span>Art direction</span><span>Digital experience</span><button type="button" onClick={openBrief}>Work with us ↗</button></div>
+        <div className="services" id="services"><span>Brand strategy</span><span>Art direction</span><span>Digital experience</span><button type="button" onClick={openBrief}>Получить разбор ↗</button></div>
         <footer><a className="brand" href="#home"><b>ALT</b><i>●</i><b>ERA</b></a><p>hello@altera-studio.com</p><p>Instagram · Behance · LinkedIn</p></footer>
       </section>
 
@@ -101,22 +128,26 @@ export default function Home() {
         <div className="brief-layer" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setBriefOpen(false); }}>
           <section className="brief-card" role="dialog" aria-modal="true" aria-labelledby="brief-title">
             <button className="brief-close" type="button" onClick={() => setBriefOpen(false)} aria-label="Закрыть форму">×</button>
-            <div className="brief-poster"><span>NEW BUSINESS / 26</span><strong>READY<br />TO LOOK<br /><i>DIFFERENT?</i></strong><small>Moscow · worldwide</small></div>
+            <div className="brief-poster"><span>VAZURI / CASE STUDY</span><strong>НОВЫЙ<br />ВИЗУАЛЬНЫЙ<br /><i>ЯЗЫК.</i></strong><small>Айдентика · digital · worldwide</small></div>
             <div className="brief-form">
               {!sent ? (
                 <>
-                  <p>Tell us what you are building</p>
-                  <h2 id="brief-title">LET&apos;S MAKE<br />IT <i>VISIBLE.</i></h2>
+                  <p>Материалы по кейсу / ALTERA</p>
+                  <h2 id="brief-title">ПОЛУЧИТЬ<br /><i>РАЗБОР?</i></h2>
                   <form onSubmit={submitBrief}>
-                    <label>Your name<input name="name" autoComplete="name" placeholder="Name / company" required /></label>
-                    <label>How do we reach you?<input name="contact" placeholder="Email or Telegram" required /></label>
-                    <label>What do you need?<select name="service" defaultValue="identity"><option value="identity">Brand identity</option><option value="campaign">Campaign / art direction</option><option value="digital">Website / digital</option><option value="full">Full launch</option></select></label>
-                    <button type="submit">Send the brief <b>↗</b></button>
-                    <small>By sending this form you agree to personal data processing.</small>
+                    <p className="brief-lead">Отправим подборку приёмов из кейса и обсудим, как развить визуальный язык вашего бренда.</p>
+                    <input className="website-field" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+                    <label>Ваше имя<input name="name" autoComplete="name" placeholder="Имя / компания" required /></label>
+                    <label>Как с вами связаться?<input name="contact" autoComplete="email" placeholder="Email или Telegram" required /></label>
+                    <label>Что вам интересно?<select name="service" defaultValue="Разбор айдентики"><option>Разбор айдентики</option><option>Сайт бренда</option><option>Кампания / арт-дирекшн</option><option>Полный запуск</option></select></label>
+                    <label className="consent-row"><input name="consent" type="checkbox" required /><span>Соглашаюсь на обработку персональных данных</span></label>
+                    <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить материалы"} <b>↗</b></button>
+                    {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.ru</small>}
+                    <small>Никакой рассылки — только материалы по кейсу и ответ по вашему запросу.</small>
                   </form>
                 </>
               ) : (
-                <div className="brief-success" aria-live="polite"><span>✓</span><p>Brief received</p><h2>WE&apos;LL BE<br />IN <i>TOUCH.</i></h2><button type="button" onClick={() => setBriefOpen(false)}>Back to the work →</button></div>
+                <div className="brief-success" aria-live="polite"><span>✓</span><p>Запрос принят</p><h2>МАТЕРИАЛЫ<br /><i>В ПУТИ.</i></h2><button type="button" onClick={() => setBriefOpen(false)}>Вернуться к проекту →</button></div>
               )}
             </div>
           </section>
