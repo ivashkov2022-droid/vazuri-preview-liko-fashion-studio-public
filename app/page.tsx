@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { FormEvent, useEffect, useState } from "react";
 
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Home() {
   const [briefOpen, setBriefOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -68,7 +70,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
-        <Image className="hero-image" src="/images/fashion-hero.jpg" alt="Fashion-портрет кампании Altera" fill priority sizes="100vw" />
+        <Image className="hero-image" src={`${assetBase}/images/fashion-hero.jpg`} alt="Fashion-портрет кампании Altera" fill priority sizes="100vw" />
         <div className="hero-wash" aria-hidden="true" />
         <header className="header">
           <a className="brand" href="#home" aria-label="Altera — на главную"><b>ALT</b><i>●</i><b>ERA</b></a>
@@ -93,13 +95,13 @@ export default function Home() {
         <div className="studio-head"><span>01 / The studio</span><p>Strategy, image and digital presence<br />as one unmistakable system.</p><span>Since 2018</span></div>
         <h2>ONE IDEA<br /><i>MANY FORMS</i></h2>
         <div className="studio-grid">
-          <div className="studio-shot perfume"><Image src="/images/fashion-about-1.jpg" alt="Предметная съёмка парфюма" fill sizes="28vw" /></div>
+          <div className="studio-shot perfume"><Image src={`${assetBase}/images/fashion-about-1.jpg`} alt="Предметная съёмка парфюма" fill sizes="28vw" /></div>
           <div className="studio-copy">
             <span className="asterisk">✳</span>
             <p>We build fashion identities that live everywhere — from a campaign frame to an e-commerce experience.</p>
             <a href="#work">Meet the point of view <b>→</b></a>
           </div>
-          <div className="studio-shot glasses"><Image src="/images/fashion-about-2.jpg" alt="Fashion-съёмка в цветных очках" fill sizes="28vw" /></div>
+          <div className="studio-shot glasses"><Image src={`${assetBase}/images/fashion-about-2.jpg`} alt="Fashion-съёмка в цветных очках" fill sizes="28vw" /></div>
         </div>
         <div className="ticker" aria-hidden="true"><span>ART DIRECTION · BRAND IDENTITY · DIGITAL · CAMPAIGNS · </span><span>ART DIRECTION · BRAND IDENTITY · DIGITAL · CAMPAIGNS · </span></div>
       </section>
@@ -108,15 +110,15 @@ export default function Home() {
         <div className="work-head"><p>Selected work</p><h2>IMAGE IS<br /><i>THE MESSAGE</i></h2><span>2024—2026</span></div>
         <div className="projects">
           <article className="project project-wide">
-            <div className="project-image"><Image src="/images/fashion-project-1.jpg" alt="Кампания After Water" fill sizes="(max-width: 760px) 100vw, 46vw" /></div>
+            <div className="project-image"><Image src={`${assetBase}/images/fashion-project-1.jpg`} alt="Кампания After Water" fill sizes="(max-width: 760px) 100vw, 46vw" /></div>
             <div className="project-meta"><span>01 / Beauty campaign</span><h3>AFTER WATER</h3><b>↗</b></div>
           </article>
           <article className="project">
-            <div className="project-image"><Image src="/images/fashion-project-2.jpg" alt="Кампания Skin No.04" fill sizes="(max-width: 760px) 100vw, 27vw" /></div>
+            <div className="project-image"><Image src={`${assetBase}/images/fashion-project-2.jpg`} alt="Кампания Skin No.04" fill sizes="(max-width: 760px) 100vw, 27vw" /></div>
             <div className="project-meta"><span>02 / Brand launch</span><h3>SKIN NO.04</h3><b>↗</b></div>
           </article>
           <article className="project">
-            <div className="project-image"><Image src="/images/fashion-project-3.jpg" alt="Кампания Soft Armour" fill sizes="(max-width: 760px) 100vw, 27vw" /></div>
+            <div className="project-image"><Image src={`${assetBase}/images/fashion-project-3.jpg`} alt="Кампания Soft Armour" fill sizes="(max-width: 760px) 100vw, 27vw" /></div>
             <div className="project-meta"><span>03 / Editorial</span><h3>SOFT ARMOUR</h3><b>↗</b></div>
           </article>
         </div>
