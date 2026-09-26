@@ -126,10 +126,10 @@ export default function Home() {
           <button type="button" className="round-menu" onClick={showWork} aria-label="Перейти к выбранным работам"><span /><span /></button>
         </header>
 
-        <div className="hero-title" aria-label="Fashion and branding">
+        <h1 className="hero-title" aria-label="Fashion and branding">
           <span>FASHION</span>
           <span><em>&amp;</em> BRANDING</span>
-        </div>
+        </h1>
         <div className="hero-side"><span>Independent identity studio</span><span>Moscow · Berlin</span></div>
         <div className="hero-bottom">
           <p>We make fashion brands impossible to scroll past.</p>
@@ -171,6 +171,17 @@ export default function Home() {
           </article>
         </div>
         <div className="services" id="services"><span>Brand strategy</span><span>Art direction</span><span>Digital experience</span><button type="button" onClick={openBrief}>Получить разбор ↗</button></div>
+        <section className="case-study-note" aria-labelledby="case-study-title">
+          <p>VAZURI / Concept case</p>
+          <div>
+            <h2 id="case-study-title">Editorial branding translated into a digital experience.</h2>
+            <p>ALTERA demonstrates how brand strategy, campaign imagery and interface rhythm can form one coherent fashion platform.</p>
+          </div>
+          <nav aria-label="VAZURI case study links">
+            <a href="https://vazuri.ru/en#projects">More VAZURI cases ↗</a>
+            <a href="https://vazuri.ru/en#contact">Discuss a branding project ↗</a>
+          </nav>
+        </section>
         <footer><a className="brand" href="#home"><b>ALT</b><i>●</i><b>ERA</b></a><p>hello@altera-studio.com</p><p>Instagram · Behance · LinkedIn</p></footer>
       </section>
 

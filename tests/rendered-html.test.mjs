@@ -17,9 +17,16 @@ test("server-renders the complete ALTERA preview", async () => {
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /ALTERA — Fashion &amp; Branding Studio/i);
+  assert.match(html, /ALTERA — Fashion Branding Concept Case \| VAZURI/i);
   assert.match(html, /FASHION/);
   assert.match(html, /ONE IDEA/);
   assert.match(html, /AFTER WATER/);
+  assert.match(html, /rel="canonical"[^>]+vazuri-preview-liko-fashion-studio-public\//i);
+  assert.match(html, /rel="(?:shortcut )?icon"[^>]+vazuri-preview-liko-fashion-studio-public\/favicon\.svg/i);
+  assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
+  assert.match(html, /application\/ld\+json/i);
+  assert.match(html, /Editorial branding translated into a digital experience/i);
+  assert.match(html, /href="https:\/\/vazuri\.ru\/en#projects"/i);
+  assert.match(html, /"isPartOf":\{"@type":"WebSite","name":"VAZURI"/i);
   assert.doesNotMatch(html, />\s*(Codex|ChatGPT|Your site is taking shape)\b/i);
 });
