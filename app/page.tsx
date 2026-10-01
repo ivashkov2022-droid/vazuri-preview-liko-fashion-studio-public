@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useEffect, useRef, useState } from "react";
+import CaseDock from "./CaseDock";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -179,11 +180,13 @@ export default function Home() {
           </div>
           <nav aria-label="VAZURI case study links">
             <a href="https://vazuri.ru/en#projects">More VAZURI cases ↗</a>
-            <a href="https://vazuri.ru/en#contact">Discuss a branding project ↗</a>
+            <button type="button" onClick={openBrief}>Discuss a branding project ↗</button>
           </nav>
         </section>
         <footer><a className="brand" href="#home"><b>ALT</b><i>●</i><b>ERA</b></a><p>hello@altera-studio.com</p><p>Instagram · Behance · LinkedIn</p></footer>
       </section>
+
+      <CaseDock onBrief={openBrief} theme="altera" />
 
       {briefOpen && (
         <div className="brief-layer" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setBriefOpen(false); }}>
@@ -200,7 +203,7 @@ export default function Home() {
                     <input className="website-field" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                     <label>Ваше имя<input name="name" autoComplete="name" placeholder="Имя / компания" required /></label>
                     <label>Как с вами связаться?<input name="contact" autoComplete="email" placeholder="Email или Telegram" required /></label>
-                    <label>Что вам интересно?<select name="service" defaultValue="Разбор айдентики"><option>Разбор айдентики</option><option>Сайт бренда</option><option>Кампания / арт-дирекшн</option><option>Полный запуск</option></select></label>
+                    <fieldset className="brief-choices"><legend>Что вам интересно?</legend><div>{["Разбор айдентики", "Сайт бренда", "Кампания / арт-дирекшн", "Полный запуск"].map((option, index) => <label key={option}><input type="radio" name="service" value={option} defaultChecked={index === 0} /><span>{option}</span></label>)}</div></fieldset>
                     <label className="consent-row"><input name="consent" type="checkbox" required /><span>Соглашаюсь на обработку персональных данных</span></label>
                     <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить подборку приёмов"} <b>↗</b></button>
                     {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.ru</small>}

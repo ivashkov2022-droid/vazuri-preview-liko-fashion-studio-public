@@ -76,10 +76,23 @@ a { color: inherit; }
 .case-study-note h2 { margin: 0; font-family: Impact, 'Arial Narrow', sans-serif; font-size: clamp(48px, 6vw, 92px); line-height: .82; text-transform: uppercase; }
 .case-study-note div > p { max-width: 640px; margin: 24px 0 0; color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.55; }
 .case-study-note nav { align-content: start; display: grid; gap: 14px; }
-.case-study-note nav a { padding-bottom: 9px; border-bottom: 1px solid rgba(255,255,255,.5); color: inherit; font-size: 8px; font-weight: 900; letter-spacing: 1.4px; text-decoration: none; text-transform: uppercase; }
+.case-study-note nav a,.case-study-note nav button { padding:0 0 9px; border:0; border-bottom:1px solid rgba(255,255,255,.5); color:inherit; background:transparent; font-size:8px; font-weight:900; letter-spacing:1.4px; text-align:left; text-decoration:none; text-transform:uppercase; cursor:pointer; }
 .work footer { min-height: 95px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; }
 .work footer p { margin: 0; color: rgba(255,255,255,.48); font-size: 8px; letter-spacing: 1.4px; text-transform: uppercase; }
 .work footer p:last-child { text-align: right; }
+
+.case-dock { align-items:center; backdrop-filter:blur(14px); background:rgba(240,92,49,.92); border:1px solid rgba(17,17,17,.28); border-radius:999px; bottom:max(16px,env(safe-area-inset-bottom)); box-shadow:0 14px 42px rgba(0,0,0,.28); color:var(--ink); display:grid; gap:5px; grid-template-columns:28px minmax(84px,auto) auto auto; left:16px; min-height:52px; padding:6px; position:fixed; z-index:45; }
+.case-dock__signal { display:grid; height:28px; place-items:center; position:relative; width:28px; }
+.case-dock__signal::before,.case-dock__signal::after { border:1px solid var(--acid); border-radius:50%; content:""; inset:4px; position:absolute; }
+.case-dock__signal::after { border-style:dashed; inset:0; animation:dockOrbit 8s linear infinite; }
+.case-dock__signal i { background:var(--acid); border-radius:50%; box-shadow:0 0 15px var(--acid); height:7px; width:7px; }
+.case-dock__status { height:11px; min-width:96px; overflow:hidden; padding:0 10px 0 4px; position:relative; }
+.case-dock__status b { animation:dockStatus 12s steps(1,end) infinite; display:block; font-size:7px; letter-spacing:.12em; line-height:11px; text-transform:uppercase; }
+.case-dock__status b:last-child { animation-delay:6s; position:absolute; top:0; visibility:hidden; }
+.case-dock>a,.case-dock>button { align-items:center; background:transparent; border:1px solid rgba(17,17,17,.28); border-radius:999px; color:inherit; cursor:pointer; display:flex; font-size:8px; font-weight:900; justify-content:center; letter-spacing:.08em; min-height:38px; padding:0 13px; text-transform:uppercase; }
+.case-dock>button { background:var(--acid); border-color:var(--acid); }
+.case-dock>button span { font-size:14px; margin-left:8px; }
+.case-dock>a:focus-visible,.case-dock>button:focus-visible { outline:2px solid #fff; outline-offset:2px; }
 
 .brief-layer { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 20px; background: rgba(17,16,15,.82); backdrop-filter: blur(9px); animation: fade .25s ease both; }
 .brief-card { position: relative; width: min(980px, 95vw); max-height: 94svh; display: grid; grid-template-columns: 43% 57%; overflow: auto; background: var(--paper); box-shadow: 0 40px 110px rgba(0,0,0,.48); animation: rise .45s cubic-bezier(.2,.8,.2,1) both; }
@@ -102,6 +115,14 @@ a { color: inherit; }
 .brief-form .consent-row input { accent-color: var(--orange); flex: 0 0 auto; min-height: 0; width: 17px; height: 17px; }
 .brief-form .consent-row span { line-height: 1.35; }
 .brief-form input:focus, .brief-form select:focus { border-bottom-color: var(--orange); }
+.brief-choices { border:0; display:grid; gap:9px; margin:0; padding:0; }
+.brief-choices legend { color:#6c6861; font-size:7px; font-weight:900; letter-spacing:1.5px; text-transform:uppercase; }
+.brief-choices>div { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.brief-choices label { cursor:pointer; position:relative; }
+.brief-choices input { opacity:0; pointer-events:none; position:absolute; }
+.brief-choices label span { align-items:center; border:1px solid #aaa59c; border-radius:999px; display:flex; min-height:38px; padding:7px 11px; }
+.brief-choices input:checked+span { background:var(--orange); border-color:var(--orange); color:#fff; }
+.brief-choices input:focus-visible+span { outline:2px solid var(--orange); outline-offset:2px; }
 .brief-form form > button, .brief-success button { min-height: 58px; margin-top: 4px; padding: 0 22px; display: flex; align-items: center; justify-content: space-between; border: 0; background: var(--ink); color: #fff; font-size: 9px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
 .brief-form form > button b { color: var(--acid); }
 .brief-form form > small { color: #98928a; font-size: 7px; line-height: 1.4; }
@@ -110,6 +131,8 @@ a { color: inherit; }
 .brief-success button { width: 100%; margin-top: 34px; }
 @keyframes fade { from { opacity: 0; } }
 @keyframes rise { from { opacity: 0; transform: translateY(25px); } }
+@keyframes dockOrbit { to { transform:rotate(360deg); } }
+@keyframes dockStatus { 0%,49% { visibility:visible; } 50%,100% { visibility:hidden; } }
 
 @media (max-width: 900px) {
   .hero-title { font-size: 12.4vw; }
@@ -130,7 +153,7 @@ a { color: inherit; }
   .header nav { display: none; }
   .brand { font-size: 21px; }
   .round-menu { width: 44px; height: 44px; }
-  .hero-title { top: 42%; left: 17px; right: 17px; font-size: 18.2vw; line-height: .78; letter-spacing: -2px; }
+  .hero-title { top: 47%; left: 17px; right: 17px; font-size: 18.2vw; line-height: .78; letter-spacing: -2px; }
   .hero-title span:last-child { padding-left: 0; }
   .hero-title em { display: block; }
   .hero-side { display: none; }
@@ -175,6 +198,9 @@ a { color: inherit; }
   .brief-form { padding: 36px 24px 39px; }
   .brief-form h2 { font-size: 49px; }
   .brief-form form { margin-top: 27px; gap: 14px; }
+  .case-dock { bottom:max(10px,env(safe-area-inset-bottom)); grid-template-columns:26px 1fr 1.4fr; left:10px; right:10px; }
+  .case-dock__status { display:none; }
+  .case-dock>a,.case-dock>button { min-height:36px; padding:0 9px; width:100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
