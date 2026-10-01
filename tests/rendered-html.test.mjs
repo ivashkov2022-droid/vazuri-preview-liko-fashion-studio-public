@@ -6,7 +6,7 @@ async function render() {
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
   return worker.fetch(
-    new Request("http://localhost/vazuri-preview-liko-fashion-studio-public/", { headers: { accept: "text/html" } }),
+    new Request("http://localhost/altera/", { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -21,8 +21,8 @@ test("server-renders the complete ALTERA preview", async () => {
   assert.match(html, /FASHION/);
   assert.match(html, /ONE IDEA/);
   assert.match(html, /AFTER WATER/);
-  assert.match(html, /rel="canonical"[^>]+vazuri-preview-liko-fashion-studio-public\//i);
-  assert.match(html, /rel="(?:shortcut )?icon"[^>]+vazuri-preview-liko-fashion-studio-public\/favicon\.svg/i);
+  assert.match(html, /rel="canonical"[^>]+https:\/\/vazuri\.ru\/altera\//i);
+  assert.match(html, /rel="(?:shortcut )?icon"[^>]+altera\/favicon\.svg/i);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /Editorial branding translated into a digital experience/i);

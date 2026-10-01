@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://ivashkov2022-droid.github.io/vazuri-preview-liko-fashion-studio-public/",
+    "https://vazuri.ru/altera/",
 );
 const ogImage = new URL("og.png", siteUrl).href;
 const favicon = new URL("favicon.svg", siteUrl).href;
