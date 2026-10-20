@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://vazuri.ru/altera/",
+    "https://vazuri.io/altera/",
 );
 const ogImage = new URL("og.png", siteUrl).href;
 const favicon = new URL("favicon.svg", siteUrl).href;
@@ -65,8 +65,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: siteUrl.href,
     image: ogImage,
     inLanguage: "en",
-    creator: { "@type": "Organization", name: "VAZURI", url: "https://vazuri.ru/" },
-    isPartOf: { "@type": "WebSite", name: "VAZURI", url: "https://vazuri.ru/" },
+    creator: { "@type": "Organization", name: "VAZURI", url: "https://vazuri.io/" },
+    isPartOf: { "@type": "WebSite", name: "VAZURI", url: "https://vazuri.io/" },
     keywords: "fashion website design, branding studio website, editorial web design, digital art direction",
   };
 

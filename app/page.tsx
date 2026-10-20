@@ -92,7 +92,7 @@ export default function Home() {
     setFormStatus("sending");
 
     try {
-      const response = await fetch("https://vazuri.ru/lead.php", {
+      const response = await fetch("https://vazuri.io/lead.php", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
@@ -179,7 +179,7 @@ export default function Home() {
             <p>ALTERA demonstrates how brand strategy, campaign imagery and interface rhythm can form one coherent fashion platform.</p>
           </div>
           <nav aria-label="VAZURI case study links">
-            <a href="https://vazuri.ru/en#projects">More VAZURI cases ↗</a>
+            <a href="https://vazuri.io/en#projects">More VAZURI cases ↗</a>
             <button type="button" onClick={openBrief}>Discuss a branding project ↗</button>
           </nav>
         </section>
