@@ -206,7 +206,7 @@ export default function Home() {
                     <fieldset className="brief-choices"><legend>Что вам интересно?</legend><div>{["Разбор айдентики", "Сайт бренда", "Кампания / арт-дирекшн", "Полный запуск"].map((option, index) => <label key={option}><input type="radio" name="service" value={option} defaultChecked={index === 0} /><span>{option}</span></label>)}</div></fieldset>
                     <label className="consent-row"><input name="consent" type="checkbox" required /><span>Соглашаюсь на обработку персональных данных</span></label>
                     <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить подборку приёмов"} <b>↗</b></button>
-                    {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.ru</small>}
+                    {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.io</small>}
                     <small>Никакой рассылки — только материалы по кейсу и ответ по вашему запросу.</small>
                   </form>
                 </>
