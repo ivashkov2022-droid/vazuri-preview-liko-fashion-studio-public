@@ -27,6 +27,9 @@ test("server-renders the complete ALTERA preview", async () => {
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /Editorial branding translated into a digital experience/i);
   assert.match(html, /href="https:\/\/vazuri\.io\/en#projects"/i);
+  assert.match(html, /vazuri-case-dock\.css\?v=20261023-universal-puzzle-v1/i);
+  assert.match(html, /vazuri-case-dock\.js\?v=20261023-universal-puzzle-v1/i);
+  assert.match(html, /data-vazuri-theme="altera"/i);
   assert.doesNotMatch(html, /vazuri\.ru/i);
   assert.match(html, /"isPartOf":\{"@type":"WebSite","name":"VAZURI"/i);
   assert.doesNotMatch(html, />\s*(Codex|ChatGPT|Your site is taking shape)\b/i);

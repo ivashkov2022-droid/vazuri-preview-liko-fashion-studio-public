@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const dockAssetVersion = "20261023-universal-puzzle-v1";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -82,10 +83,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {children}
-        <link rel="stylesheet" href={`${assetBase}/vazuri-case-dock.css`} />
+        <link rel="stylesheet" href={`${assetBase}/vazuri-case-dock.css?v=${dockAssetVersion}`} />
         <script
           defer
-          src={`${assetBase}/vazuri-case-dock.js`}
+          src={`${assetBase}/vazuri-case-dock.js?v=${dockAssetVersion}`}
           data-vazuri-dock
           data-vazuri-lang="ru"
           data-vazuri-case="ALTERA"
