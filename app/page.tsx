@@ -1,119 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useEffect, useRef, useState } from "react";
-import CaseDock from "./CaseDock";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Home() {
-  const [briefOpen, setBriefOpen] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "error">("idle");
-  const prompted = useRef(false);
-
-  useEffect(() => {
-    let timer = 0;
-    const onScroll = () => {
-      const work = document.getElementById("work");
-      const trigger = work ? work.offsetTop - window.innerHeight * 0.18 : window.innerHeight * 1.8;
-      if (prompted.current || window.scrollY <= trigger) return;
-      prompted.current = true;
-      timer = window.setTimeout(() => {
-        setSent(false);
-        setFormStatus("idle");
-        setBriefOpen(true);
-      }, 650);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.clearTimeout(timer);
-    };
-  }, []);
-
-  useEffect(() => {
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setBriefOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!briefOpen) return;
-    const root = document.documentElement;
-    const body = document.body;
-    const scrollY = window.scrollY;
-    const scrollbarWidth = Math.max(0, window.innerWidth - root.clientWidth);
-    const previousRootOverflow = root.style.overflow;
-    const previousBodyStyles = {
-      position: body.style.position,
-      top: body.style.top,
-      left: body.style.left,
-      right: body.style.right,
-      width: body.style.width,
-      overflow: body.style.overflow,
-      paddingRight: body.style.paddingRight,
-    };
-
-    root.style.overflow = "hidden";
-    body.style.position = "fixed";
-    body.style.top = `-${scrollY}px`;
-    body.style.left = "0";
-    body.style.right = "0";
-    body.style.width = "100%";
-    body.style.overflow = "hidden";
-    if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
-
-    return () => {
-      const previousScrollBehavior = root.style.scrollBehavior;
-      root.style.scrollBehavior = "auto";
-      root.style.overflow = previousRootOverflow;
-      Object.assign(body.style, previousBodyStyles);
-      window.scrollTo(0, scrollY);
-      root.style.scrollBehavior = previousScrollBehavior;
-    };
-  }, [briefOpen]);
-
-  const openBrief = () => {
-    prompted.current = true;
-    setSent(false);
-    setFormStatus("idle");
-    setBriefOpen(true);
-  };
-
-  const submitBrief = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    setFormStatus("sending");
-
-    try {
-      const response = await fetch("https://vazuri.io/lead.php", {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify({
-          source: "behance",
-          website: data.get("website") || "",
-          name: data.get("name") || "",
-          contact: data.get("contact") || "",
-          company: "",
-          message: `Материалы по кейсу ALTERA. Интерес: ${data.get("service") || "разбор айдентики"}.`,
-          consent: data.get("consent") || "",
-        }),
-      });
-      if (response.type !== "opaque" && !response.ok) throw new Error("send_failed");
-      form.reset();
-      setSent(true);
-      setFormStatus("idle");
-    } catch {
-      setFormStatus("error");
-    }
-  };
-
   const showWork = () => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -171,7 +62,7 @@ export default function Home() {
             <div className="project-meta"><span>03 / Editorial</span><h3>SOFT ARMOUR</h3><b>↗</b></div>
           </article>
         </div>
-        <div className="services" id="services"><span>Brand strategy</span><span>Art direction</span><span>Digital experience</span><button type="button" onClick={openBrief}>Получить разбор ↗</button></div>
+        <div className="services" id="services"><span>Brand strategy</span><span>Art direction</span><span>Digital experience</span><button type="button" data-vazuri-brief-open>Получить разбор ↗</button></div>
         <section className="case-study-note" aria-labelledby="case-study-title">
           <p>VAZURI / Concept case</p>
           <div>
@@ -180,43 +71,12 @@ export default function Home() {
           </div>
           <nav aria-label="VAZURI case study links">
             <a href="https://vazuri.io/en#projects">More VAZURI cases ↗</a>
-            <button type="button" onClick={openBrief}>Discuss a branding project ↗</button>
+            <button type="button" data-vazuri-brief-open>Discuss a branding project ↗</button>
           </nav>
         </section>
         <footer><a className="brand" href="#home"><b>ALT</b><i>●</i><b>ERA</b></a><p>hello@altera-studio.com</p><p>Instagram · Behance · LinkedIn</p></footer>
       </section>
 
-      <CaseDock onBrief={openBrief} theme="altera" />
-
-      {briefOpen && (
-        <div className="brief-layer" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setBriefOpen(false); }}>
-          <section className="brief-card" role="dialog" aria-modal="true" aria-labelledby="brief-title">
-            <button className="brief-close" type="button" onClick={() => setBriefOpen(false)} aria-label="Закрыть форму">×</button>
-            <div className="brief-poster"><span>VAZURI / CASE STUDY</span><strong>НОВЫЙ<br />ВИЗУАЛЬНЫЙ<br /><i>ЯЗЫК.</i></strong><small>Айдентика · digital · worldwide</small></div>
-            <div className="brief-form">
-              {!sent ? (
-                <>
-                  <p>Материалы по кейсу / ALTERA</p>
-                  <h2 id="brief-title">ИДЕИ ДЛЯ<br /><i>ВАШЕГО БРЕНДА?</i></h2>
-                  <form onSubmit={submitBrief}>
-                    <p className="brief-lead">Отправим подборку приёмов из кейса и обсудим, как развить визуальный язык вашего бренда.</p>
-                    <input className="website-field" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-                    <label>Ваше имя<input name="name" autoComplete="name" placeholder="Имя / компания" required /></label>
-                    <label>Как с вами связаться?<input name="contact" autoComplete="email" placeholder="Email или Telegram" required /></label>
-                    <fieldset className="brief-choices"><legend>Что вам интересно?</legend><div>{["Разбор айдентики", "Сайт бренда", "Кампания / арт-дирекшн", "Полный запуск"].map((option, index) => <label key={option}><input type="radio" name="service" value={option} defaultChecked={index === 0} /><span>{option}</span></label>)}</div></fieldset>
-                    <label className="consent-row"><input name="consent" type="checkbox" required /><span>Соглашаюсь на обработку персональных данных</span></label>
-                    <button type="submit">{formStatus === "sending" ? "Отправляем…" : "Получить подборку приёмов"} <b>↗</b></button>
-                    {formStatus === "error" && <small className="form-error">Не удалось отправить. Напишите нам: hello@vazuri.io</small>}
-                    <small>Никакой рассылки — только материалы по кейсу и ответ по вашему запросу.</small>
-                  </form>
-                </>
-              ) : (
-                <div className="brief-success" aria-live="polite"><span>✓</span><p>Запрос принят</p><h2>МАТЕРИАЛЫ<br /><i>В ПУТИ.</i></h2><button type="button" onClick={() => setBriefOpen(false)}>Вернуться к проекту →</button></div>
-              )}
-            </div>
-          </section>
-        </div>
-      )}
     </main>
   );
 }

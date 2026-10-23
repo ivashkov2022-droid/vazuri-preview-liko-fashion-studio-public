@@ -16,7 +16,7 @@ const response = await worker.fetch(
 
 if (!response.ok) throw new Error(`Render failed with HTTP ${response.status}`);
 const html = await response.text();
-if (!html.includes('class="case-dock case-dock--altera"')) throw new Error('Rendered dock is missing');
+if (!html.includes('data-vazuri-theme="altera"')) throw new Error('Rendered dock bootstrap is missing');
 
 await mkdir(target, { recursive: true });
 const clientRoot = resolve('dist/client');

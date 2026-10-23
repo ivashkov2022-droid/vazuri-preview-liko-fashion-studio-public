@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
     "https://vazuri.io/altera/",
@@ -80,6 +82,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {children}
+        <link rel="stylesheet" href={`${assetBase}/vazuri-case-dock.css`} />
+        <script
+          defer
+          src={`${assetBase}/vazuri-case-dock.js`}
+          data-vazuri-dock
+          data-vazuri-lang="ru"
+          data-vazuri-case="ALTERA"
+          data-vazuri-theme="altera"
+          data-vazuri-source="case-altera"
+        />
       </body>
     </html>
   );
