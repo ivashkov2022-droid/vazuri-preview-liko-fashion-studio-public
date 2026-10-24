@@ -1013,3 +1013,33 @@
   72% { opacity: 1; transform: scaleY(1); }
   100% { opacity: 0; transform: scaleY(1); }
 }
+
+/* Assemble directly over the case; frame the puzzle only when it is whole. */
+[data-v2-case-console][data-theme="altera"] .v2-console__toggle,
+[data-v2-case-console][data-theme="altera"] .v2-console__toggle:hover,
+[data-v2-case-console][data-theme="altera"] .v2-console__toggle:focus-visible {
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  outline: 0;
+}
+
+[data-v2-case-console][data-theme="altera"] .v2-console__outline-progress { opacity: 0; }
+[data-v2-case-console][data-theme="altera"] .is-puzzle-complete .v2-console__outline-progress { opacity: 1; }
+[data-v2-case-console][data-theme="altera"] .v2-console__outline-runner { display: none; }
+
+/* A small keyboard focus marker does not introduce an early square frame. */
+[data-v2-case-console][data-theme="altera"] .v2-console__toggle::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 2px;
+  background: var(--v2-accent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-v2-case-console][data-theme="altera"] .v2-console__toggle:focus-visible::after { opacity: 1; }

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "scope": "Approved transparent beacon: preserve own cube sequence/color, banner, form and case; remove background/shadow/blur/running perimeter; reveal full frame at final cube and hide on reverse.",
+  "validation": {
+    "profiles": 3,
+    "checks": 243,
+    "passed": 243,
+    "failed": 0,
+    "valid": true
+  },
+  "sourceIntegrity": {
+    "onlyOutlineCompletionLogicChanged": true,
+    "cubeAnimationAndSequenceUnchanged": true,
+    "formAndPanelCodeUnchanged": true,
+    "existingCSSRetainedVerbatim": true,
+    "sourcePaths": [
+      "projects\\altera-concept-public\\vazuri-preview-liko-fashion-studio-public-main\\public\\vazuri-case-dock.js",
+      "projects\\altera-concept-public\\vazuri-preview-liko-fashion-studio-public-main\\public\\vazuri-case-dock.css"
+    ]
+  },
+  "candidate": {
+    "key": "altera",
+    "serverCase": "vazuri-preview-liko-fashion-studio-public",
+    "previous": "/srv/www/vazuri.io/releases/20261024T061023Z-scrollsync-transparent-v1",
+    "changed": [
+      "vazuri-case-dock.css",
+      "vazuri-case-dock.js",
+      "index.html"
+    ],
+    "hashes": {
+      "vazuri-case-dock.css": "f514230d7c2216991091ee372a1b9707f697f92ff21f52d894d2abb2fa280422",
+      "vazuri-case-dock.js": "0a3186fbee1163c943c876acbf6d49e6ae16144b270db9e73b86a07440840ab3",
+      "index.html": "c3d0d9d6f935fec28f9a9ddead6e1c38656914e45c41d6019cc36cf686d9d4a8"
+    },
+    "before": {
+      "vazuri-case-dock.css": "6a9394cde184cea1175a63bfafddb43801db01160c6853d4d01fa8ee2b3c0bad",
+      "vazuri-case-dock.js": "d15e9689922b10426680c9ea0247c8ae4c103a5fc912f9e1dd995a5d7dcf354f",
+      "index.html": "534af2ca1742b9b8bfc0fe8f1b42b5ab278d33f391757944c61aafeb976aacb6"
+    },
+    "htmlChanged": 1,
+    "allMediaAndPageContentUnchanged": true,
+    "productionSEOAndHydrationMarkupRetained": true
+  }
+}

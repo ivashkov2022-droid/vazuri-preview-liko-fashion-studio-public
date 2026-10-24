@@ -209,6 +209,7 @@
     const outlineProgress = root.querySelector('.v2-console__outline-progress');
     const outlineRunner = root.querySelector('.v2-console__outline-runner');
     const puzzlePieces = [...root.querySelectorAll('[data-v2-puzzle-piece]')];
+    const puzzleCompletionProgress = Math.max(...puzzlePieces.map((piece) => Number(piece.dataset.end || 1)));
     const panel = root.querySelector('.v2-console__panel');
     const brief = root.querySelector('.v2-brief');
     const drawer = root.querySelector('.v2-brief__drawer');
@@ -326,9 +327,9 @@
       const scrollTop = Math.max(window.scrollY, scrollingElement.scrollTop);
       const remaining = Math.max(0, available - scrollTop);
       const progress = Math.max(0, Math.min(1, scrollTop / available));
-      outlineProgress.style.strokeDashoffset = (1 - progress).toFixed(4);
-      outlineRunner.style.strokeDashoffset = (1.12 - progress).toFixed(4);
-      outlineRunner.style.opacity = progress > 0.006 && progress < 0.994 ? '1' : '0';
+      consoleElement.classList.toggle('is-puzzle-complete', progress >= puzzleCompletionProgress);
+      outlineProgress.style.strokeDashoffset = '0';
+      outlineRunner.style.opacity = '0';
       puzzlePieces.forEach((piece) => {
         const start = Number(piece.dataset.start || 0);
         const end = Number(piece.dataset.end || 1);
@@ -359,6 +360,7 @@
       completionPromptShown = true;
       outlineProgress.style.strokeDashoffset = '0';
       outlineRunner.style.opacity = '0';
+      if (theme === 'altera') consoleElement.classList.add('is-puzzle-complete');
       puzzlePieces.forEach((piece) => {
         piece.style.opacity = '1';
         piece.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
