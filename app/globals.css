@@ -212,3 +212,6 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Remove only the two obsolete ALTERA footer actions; preserve the hydrated page and case beacon. */
+.case-study-note > nav[aria-label="VAZURI case study links"] { display: none !important; }
