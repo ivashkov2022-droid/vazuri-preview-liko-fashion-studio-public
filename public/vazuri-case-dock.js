@@ -125,9 +125,13 @@
       return {
         index, column, row, start, end: Math.min(start + 0.18, 0.9), ...offsets[direction],
       };
-    }).filter((piece) => !arrowCellIndexes.has(piece.index));
+    });
+    const coloredPuzzleCompletion = Math.max(...puzzleCells.filter((piece) => !arrowCellIndexes.has(piece.index)).map((piece) => Number(piece.end.toFixed(4))));
+    puzzleCells.forEach((piece) => {
+      if (arrowCellIndexes.has(piece.index)) piece.end = Math.min(piece.end, coloredPuzzleCompletion);
+    });
     const puzzleMarkup = puzzleCells.map((piece) => `
-      <rect class="v2-puzzle__piece" data-v2-puzzle-piece data-start="${piece.start.toFixed(4)}" data-end="${piece.end.toFixed(4)}" data-x="${piece.x}" data-y="${piece.y}" data-rotate="${piece.rotate}" x="${3 + piece.column * (50 / 7)}" y="${3 + piece.row * (50 / 7)}" width="${(50 / 7) + 0.08}" height="${(50 / 7) + 0.08}" />`).join('');
+      <rect class="v2-puzzle__piece${arrowCellIndexes.has(piece.index) ? ' v2-puzzle__piece--arrow' : ''}" data-v2-puzzle-piece data-start="${piece.start.toFixed(4)}" data-end="${piece.end.toFixed(4)}" data-x="${piece.x}" data-y="${piece.y}" data-rotate="${piece.rotate}" x="${3 + piece.column * (50 / 7)}" y="${3 + piece.row * (50 / 7)}" width="${(50 / 7) + 0.08}" height="${(50 / 7) + 0.08}" />`).join('');
 
     const root = document.createElement('div');
     root.dataset.vazuriDockRoot = '';

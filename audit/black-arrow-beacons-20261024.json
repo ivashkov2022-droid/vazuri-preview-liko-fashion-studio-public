@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-24",
+  "scope": "Fill the 13 transparent arrow cells with black cubes in the existing staggered sequence; preserve 36 colored cubes, the completion threshold, transparent surface, frame, banner, form and all page/media content.",
+  "validation": {
+    "profiles": 3,
+    "checks": 357,
+    "passed": 357,
+    "failed": 0,
+    "valid": true
+  },
+  "sourceIntegrity": {
+    "key": "altera",
+    "onlyArrowCellsAdded": true,
+    "blackArrowCells": 13,
+    "coloredCells": 36,
+    "existingColorGeometryTimingsAndSequenceUnchanged": true,
+    "originalCompletionThresholdPreserved": true,
+    "allFormPanelScrollAndVideoCodeVerbatim": true,
+    "existingCSSRetainedVerbatim": true,
+    "transparentSurfaceAndReverseBehaviorPreserved": true
+  },
+  "candidate": {
+    "key": "altera",
+    "serverCase": "vazuri-preview-liko-fashion-studio-public",
+    "previous": "/srv/www/vazuri.io/releases/20261024T070002Z-transparent-beacons-rollout-v1",
+    "changed": [
+      "vazuri-case-dock.css",
+      "vazuri-case-dock.js",
+      "index.html"
+    ],
+    "hashes": {
+      "vazuri-case-dock.css": "92d466caff2cf04af575572d5b08de426a90b645bd81fa95f386d2a375bb4ee2",
+      "vazuri-case-dock.js": "622736281805b0f29fd2fc1afaf55dfff88b0de5cd85073c65cd8126b428171d",
+      "index.html": "09d62811139ae987d8867441b22ca71868add359327710d6c05f06dfe7f9195c"
+    },
+    "before": {
+      "vazuri-case-dock.css": "f514230d7c2216991091ee372a1b9707f697f92ff21f52d894d2abb2fa280422",
+      "vazuri-case-dock.js": "0a3186fbee1163c943c876acbf6d49e6ae16144b270db9e73b86a07440840ab3",
+      "index.html": "c3d0d9d6f935fec28f9a9ddead6e1c38656914e45c41d6019cc36cf686d9d4a8"
+    },
+    "htmlChanged": 1,
+    "allMediaAndPageContentUnchanged": true,
+    "productionSEOAndHydrationMarkupRetained": true,
+    "onlyArrowCellsAndScopedBlackFillAdded": true
+  }
+}

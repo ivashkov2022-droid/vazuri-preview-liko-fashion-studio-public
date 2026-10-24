@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const dockAssetVersion = "20261024-transparent-v1";
+const dockAssetVersion = "20261024-black-arrow-v1";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
