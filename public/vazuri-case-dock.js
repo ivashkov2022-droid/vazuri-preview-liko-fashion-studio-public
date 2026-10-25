@@ -261,7 +261,7 @@
     function createCaseCompletionLifecycle({ isOpen, isBlocked, open, close }) {
       const pageWindow = window;
       const pageDocument = document;
-      const quietMs = 180;
+      const quietMs = 600;
       const activePointers = new Set();
       const listeners = [];
       let activeTouches = 0;
@@ -283,7 +283,8 @@
           available, viewportHeight, scrollTop, actualScrollTop: Math.max(0, rawTop),
           atEnd: available > Math.max(220, viewportHeight * .35)
             && scrollTop > 0
-            && available - scrollTop <= Math.max(32, viewportHeight * .04),
+            && scrollTop / available >= .9
+            && available - scrollTop <= viewportHeight * .5,
         };
       };
       let observedScrollTop = geometry().actualScrollTop;

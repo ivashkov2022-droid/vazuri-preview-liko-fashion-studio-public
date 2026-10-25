@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-25",
+  "scope": "Use one canonical completion lifecycle across all nine cases: once in the completed ending zone after 600ms input quiet; next input dismisses even at a scroll boundary; native beacon click or keyboard reopens. Preserve cube progression, palette, black arrow, transparent surface, form and all case content/media.",
+  "validation": {
+    "profiles": 3,
+    "checks": 246,
+    "passed": 246,
+    "failed": 0,
+    "valid": true
+  },
+  "lifecycleValidation": {
+    "profiles": 1,
+    "scenarios": 3,
+    "checks": 37,
+    "passed": 37,
+    "failed": 0
+  },
+  "controllerUnitChecks": 33,
+  "sourceIntegrity": {
+    "key": "altera",
+    "canonicalSha256": "75f58d0d7781bd3059e50bfb5211a2405c28a306bd049b2086f7327c8532419b",
+    "onlyCanonicalPolicyChanged": true,
+    "beforeSha256": "0bde2bc388f1ba3bfb18058a0b9dabb7cbaa11128c07087c068fbe55552f59cc",
+    "afterSha256": "917eee6b36f4adb816ac29346a5001d988f490fbace839a45550c729136be6cb",
+    "cssUnchanged": true
+  },
+  "candidate": {
+    "key": "altera",
+    "serverCase": "vazuri-preview-liko-fashion-studio-public",
+    "previous": "/srv/www/vazuri.io/releases/20261025T050218Z-unified-case-beacon-v1",
+    "changed": [
+      "vazuri-case-dock.js",
+      "index.html"
+    ],
+    "hashes": {
+      "vazuri-case-dock.js": "917eee6b36f4adb816ac29346a5001d988f490fbace839a45550c729136be6cb",
+      "index.html": "5a49dfd1e261de002e71ee3d3303a97cfffdfb7099888af1ac8552567e9a6fb1"
+    },
+    "before": {
+      "vazuri-case-dock.js": "0bde2bc388f1ba3bfb18058a0b9dabb7cbaa11128c07087c068fbe55552f59cc",
+      "index.html": "0df2492001244e69c4edeca036dad869b065f2f1eba6e9eabb2be5845390b658"
+    },
+    "htmlChanged": 1,
+    "allMediaAndPageContentUnchanged": true,
+    "allCSSUnchanged": true,
+    "productionSEOAndHydrationMarkupRetained": true,
+    "onlyCompletionLifecycleAndCacheVersionsChanged": true
+  }
+}
