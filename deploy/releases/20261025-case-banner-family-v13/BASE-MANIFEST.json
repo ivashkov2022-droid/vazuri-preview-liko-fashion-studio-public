@@ -1,0 +1,190 @@
+{
+  "vazuri-preview-liko-fashion-studio-public/.assetsignore": {
+    "sha256": "14ce8d5101f6d8f172242053466d44f5e2cd622dee81db53c14bd445c25d1942",
+    "size": 30
+  },
+  "vazuri-preview-liko-fashion-studio-public/.nojekyll": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  "vazuri-preview-liko-fashion-studio-public/.vite/manifest.json": {
+    "sha256": "f9843ed89dd6256bd006eecb441976bfcd2fdd6812143dc69a2f0ea650cbed9a",
+    "size": 1730
+  },
+  "vazuri-preview-liko-fashion-studio-public/_headers": {
+    "sha256": "1951ad361fe6479fdc9e631551f31a4cd8455ab50410f672f98c521c1bd3244a",
+    "size": 138
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/2bbabdf0-dc51-4162-8ce3-809dfe12b024/_buildManifest.js": {
+    "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "size": 159
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/2bbabdf0-dc51-4162-8ce3-809dfe12b024/_ssgManifest.js": {
+    "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "size": 76
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/8f3c31f4-e8be-435c-8c65-0db69148a241/_buildManifest.js": {
+    "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "size": 159
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/8f3c31f4-e8be-435c-8c65-0db69148a241/_ssgManifest.js": {
+    "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "size": 76
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/9ec4bf02-4284-430a-bb32-cb00dcccf7cc/_buildManifest.js": {
+    "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "size": 159
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/9ec4bf02-4284-430a-bb32-cb00dcccf7cc/_ssgManifest.js": {
+    "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "size": 76
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/bd42c343-69f0-43e0-984a-191c8f977058/_buildManifest.js": {
+    "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "size": 159
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/bd42c343-69f0-43e0-984a-191c8f977058/_ssgManifest.js": {
+    "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "size": 76
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/framework-Da1C8gmE.js": {
+    "sha256": "fe4cf272e66c5a78a1968293ef202ee0a9a515ad7a67042717a570db1873ea36",
+    "size": 190152
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/index-B0-IP0KP.js": {
+    "sha256": "1391cf7fba022dc1432f15dd8b75759e73360203317aa4148525396888726fe1",
+    "size": 176743
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/index-CHLtbczp.js": {
+    "sha256": "cf41ee5266a231fe67966050dc2a013fdd23816a62854d0401124cb6c3afbb1d",
+    "size": 176743
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/index-D3kWkhKH.js": {
+    "sha256": "7a315ad57e53e34d01b2ed26a0a2b61285a6e662e1f44d8a00aff047a0f56e3d",
+    "size": 176743
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/index-DuGOy36N.js": {
+    "sha256": "650eb0d6f77f3bbf31d46cfca8cd442d3c8da30796fce9a61c45645e5203c32b",
+    "size": 176743
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/index-lD9bMWnA.js": {
+    "sha256": "118646e4b291e976496f2c6dda481469701b3fee2f3a07b633978a71107f2f91",
+    "size": 176743
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/layout-segment-context-BMLujwhY.js": {
+    "sha256": "98d00a7ce302fd1580af36ffb12c49ef5bef79a12c63f96a324fcf8c735ebeea",
+    "size": 489
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/layout-segment-context-D6N98jvT.js": {
+    "sha256": "4733ee05054d2255b6cd69b782414c1c4060b9610709767f8ace9e9b81d1d520",
+    "size": 489
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/layout-segment-context-DVPd0mXs.js": {
+    "sha256": "17cc72e94773154d281b0e5b8b8b766e213b616b8cc032b701bf3df8d439651d",
+    "size": 489
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/layout-segment-context-_6TgKqMd.js": {
+    "sha256": "190e019e0c950fbde2cae948b1c3ec1b1c7bc59eb303892234622d552ffdc827",
+    "size": 489
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/layout-segment-context-tZ6gzrZo.js": {
+    "sha256": "a39bd94d02beb21588326323068163fc20553a1c94dc4dd97f91db41180df3b5",
+    "size": 489
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/page-B9iDK9tp.js": {
+    "sha256": "228b8b4687575f0f5ba5b5980ec57e2c55953bb87750608b90d3e220a3ca00e7",
+    "size": 51567
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/page-BijvyFL1.js": {
+    "sha256": "8911539c914051f0e72c9ed0e9337cbe35ad664942bb9ab196f21a6e65a75b42",
+    "size": 51567
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/page-BpR-1zZU.js": {
+    "sha256": "e8ae332aceb08a317c5d4d7a7ecd974e9057bdc3649703c58e0ab6967314c41d",
+    "size": 51567
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/page-Dh-Mz65O.js": {
+    "sha256": "10319d3c9e4f4a34e6862700d198f7b26aa3ce9180e8be97499b2fa61cfd807c",
+    "size": 51567
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/page-Dq6LtQoe.js": {
+    "sha256": "fe284e742439ca0903246c0a4c4e72f86e52d2da43ae8390568a065e3ada8505",
+    "size": 57910
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/chunks/rolldown-runtime-ZlINWQBV.js": {
+    "sha256": "5db5ba82eef00d1dee7e86e663098c9427d01183a88d357437daff295aec3e75",
+    "size": 694
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/css/index.BIJXWBnK.css": {
+    "sha256": "7b2d5c399dea0aae44a242d4e540eafe769141630681e6f48b4dc0e66611a3d2",
+    "size": 21100
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/css/index.CjsMOMce.css": {
+    "sha256": "ffa0d40256f25a7a1862ad3c859b71ecbe776d09dc43ac268024fdc727af1565",
+    "size": 22345
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/css/index.Qr7fdWx1.altera-footer-only-v2.css": {
+    "sha256": "55bd18f05173b4979bf87d9ae6a5dcbe3964d291f5494cd67bd84abd87c898ca",
+    "size": 22576
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/css/index.Qr7fdWx1.css": {
+    "sha256": "b818710b338374e2b9606f01744d371fe2683be6008de677338a00e2abccbffb",
+    "size": 22382
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/e11c8c59-d643-49de-b4c7-52be4b767f65/_buildManifest.js": {
+    "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb",
+    "size": 159
+  },
+  "vazuri-preview-liko-fashion-studio-public/_next/static/e11c8c59-d643-49de-b4c7-52be4b767f65/_ssgManifest.js": {
+    "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479",
+    "size": 76
+  },
+  "vazuri-preview-liko-fashion-studio-public/favicon.svg": {
+    "sha256": "740ed040cab343450bdd9696c2fa3f4314e676b22af77d5388ba7e4d70eb89d3",
+    "size": 659
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-about-1.jpg": {
+    "sha256": "fd34dd53173458838b6e3af8a1d642d64addf5a8404fe813fa39e3ea117889ca",
+    "size": 8157
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-about-2.jpg": {
+    "sha256": "5c02fc89f922ac6ef6f5fb90373555f429a73c5f491a7d7117dcf3461a9b6aaf",
+    "size": 6810
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-hero.jpg": {
+    "sha256": "7010c465e2cd545d5102b4e694ec706e160d6904550d2b7a80ba781326e1b064",
+    "size": 62986
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-project-1.jpg": {
+    "sha256": "b333a0ecf0998e1c5285ba876508036d93ba222e7c70168d4b9b112d539a3d8c",
+    "size": 79570
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-project-2.jpg": {
+    "sha256": "d01d6178dc0d875c179e2116eefc711a0fc40dbb6db9139e869496cfd322f9b4",
+    "size": 79795
+  },
+  "vazuri-preview-liko-fashion-studio-public/images/fashion-project-3.jpg": {
+    "sha256": "923f3cfb36df343ca6fb06d4be97d625acd7ac00588e08be2c247197ea5ba636",
+    "size": 56269
+  },
+  "vazuri-preview-liko-fashion-studio-public/index.html": {
+    "sha256": "5a49dfd1e261de002e71ee3d3303a97cfffdfb7099888af1ac8552567e9a6fb1",
+    "size": 19279
+  },
+  "vazuri-preview-liko-fashion-studio-public/og.png": {
+    "sha256": "fe3e3c03831a11f68a06845e6b759f1a796270ff37d64171b087524cfcb69120",
+    "size": 1750698
+  },
+  "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.css": {
+    "sha256": "92d466caff2cf04af575572d5b08de426a90b645bd81fa95f386d2a375bb4ee2",
+    "size": 21607
+  },
+  "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js": {
+    "sha256": "917eee6b36f4adb816ac29346a5001d988f490fbace839a45550c729136be6cb",
+    "size": 33513
+  },
+  "vazuri-preview-liko-fashion-studio-public/vinext-client-entry-manifest.json": {
+    "sha256": "c771b121821d15c837666eabf9fa739c9a4f2a114803ba31cc3df8a6ca233a86",
+    "size": 72
+  }
+}

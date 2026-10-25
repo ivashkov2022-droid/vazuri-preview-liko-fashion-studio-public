@@ -133,6 +133,16 @@
     const puzzleMarkup = puzzleCells.map((piece) => `
       <rect class="v2-puzzle__piece${arrowCellIndexes.has(piece.index) ? ' v2-puzzle__piece--arrow' : ''}" data-v2-puzzle-piece data-start="${piece.start.toFixed(4)}" data-end="${piece.end.toFixed(4)}" data-x="${piece.x}" data-y="${piece.y}" data-rotate="${piece.rotate}" x="${3 + piece.column * (50 / 7)}" y="${3 + piece.row * (50 / 7)}" width="${(50 / 7) + 0.08}" height="${(50 / 7) + 0.08}" />`).join('');
 
+    // One solid shaft and six touching square cells; NE rotates the entire glyph.
+    const panelArrow = (upRight) => {
+      const cells = [3, 9, 15, 29, 37, 45].map((index) => {
+        const x = index % 7, y = Math.floor(index / 7);
+        const offset = [{ x: -7, y: 0, rotate: -18 }, { x: 0, y: -7, rotate: 14 }, { x: 7, y: 0, rotate: 18 }, { x: 0, y: 7, rotate: -14 }][(x + y * 2) % 4];
+        return `<rect x="${1 + x * 3}" y="${1 + y * 3}" width="3" height="3" style="--cube-x:${offset.x}px;--cube-y:${offset.y}px;--cube-rotate:${offset.rotate}deg;--cube-delay:${((index * 17) % 49) * 4}ms"/>`;
+      }).join('');
+      return `<svg class="v2-console__pixel-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g${upRight ? ' transform="rotate(135 11.5 11.5)"' : ''}><path class="v2-console__pixel-shaft" d="M1 10H22V13H1Z" style="--cube-x:0px;--cube-y:7px;--cube-rotate:0deg;--cube-delay:64ms"/>${cells}</g></svg>`;
+    };
+
     const root = document.createElement('div');
     root.dataset.vazuriDockRoot = '';
     root.dataset.v2CaseConsole = '';
@@ -149,10 +159,10 @@
           </div>
           <nav class="v2-console__actions" aria-label="${escapeHtml(copy.navigation)}">
             <a class="v2-console__action" href="${escapeHtml(projectsUrl)}">
-              <span>${escapeHtml(copy.projects)}</span><span aria-hidden="true">←</span>
+              <span>${escapeHtml(copy.projects)}</span>${panelArrow(false)}
             </a>
             <button class="v2-console__action" type="button" data-v2-brief-open>
-              <span>${escapeHtml(copy.discuss)}</span><span aria-hidden="true">↗</span>
+              <span>${escapeHtml(copy.discuss)}</span>${panelArrow(true)}
             </button>
           </nav>
         </div>
@@ -258,245 +268,180 @@
      * @param {{isOpen: () => boolean, isBlocked: () => boolean, open: () => void, close: () => void}} callbacks
      * @returns {{check: () => void, requestCheck: () => void, dismiss: () => void, toggle: () => void, destroy: () => void}}
      */
-    function createCaseCompletionLifecycle({ isOpen, isBlocked, open, close }) {
+    // Approved Nightshift banner family v13.
+    function createCaseCompletionLifecycle({ isOpen, isBlocked, open, close, isEndingZone }) {
       const pageWindow = window;
       const pageDocument = document;
-      const quietMs = 600;
-      const activePointers = new Set();
       const listeners = [];
+      const contacts = new Set();
       let activeTouches = 0;
-      let consumed = false;
-      let destroyed = false;
-      let inputSequence = 0;
-      let quietTimer = 0;
-      let stableFrame = 0;
-      let lastActivityAt = pageWindow.performance.now();
+      let automaticShown = false;
+      let finishingGesture = false;
+      let finishingTouch = false;
+      let touchInput = false;
+      let touchGesture = null;
+      let gestureTimer = 0;
       let panelScrollTop = null;
-    
-      const geometry = () => {
-        const scrolling = pageDocument.scrollingElement || pageDocument.documentElement;
-        const viewportHeight = scrolling.clientHeight || pageWindow.innerHeight;
-        const available = Math.max(scrolling.scrollHeight - viewportHeight, 1);
-        const rawTop = Math.max(pageWindow.scrollY || 0, scrolling.scrollTop || 0);
-        const scrollTop = Math.max(0, Math.min(available, rawTop));
-        return {
-          available, viewportHeight, scrollTop, actualScrollTop: Math.max(0, rawTop),
-          atEnd: available > Math.max(220, viewportHeight * .35)
-            && scrollTop > 0
-            && scrollTop / available >= .9
-            && available - scrollTop <= viewportHeight * .5,
-        };
+      let destroyed = false;
+      const top = () => Math.max(0, pageWindow.scrollY || 0, (pageDocument.scrollingElement || pageDocument.documentElement).scrollTop || 0);
+      const atBottom = () => {
+        const doc = pageDocument.scrollingElement || pageDocument.documentElement;
+        return doc.scrollHeight - doc.clientHeight - top() <= 2;
       };
-      let observedScrollTop = geometry().actualScrollTop;
       const blocked = () => isBlocked() || pageDocument.hidden === true;
-      const touching = () => activeTouches > 0 || activePointers.size > 0;
-      const insideConsole = event => {
-        const target = event.target;
-        return Boolean(target && typeof target.closest === 'function' && target.closest('.v2-console'));
+      const inside = event => Boolean(event.target?.closest?.('.v2-console'));
+      const stopGesture = () => {
+        if (gestureTimer) pageWindow.clearTimeout(gestureTimer);
+        gestureTimer = 0;
+        finishingGesture = false;
+        finishingTouch = false;
       };
-    
-      const clearPending = () => {
-        if (quietTimer) pageWindow.clearTimeout(quietTimer);
-        if (stableFrame) pageWindow.cancelAnimationFrame(stableFrame);
-        quietTimer = 0;
-        stableFrame = 0;
+      const continueGesture = () => {
+        if (!finishingGesture || destroyed) return;
+        if (gestureTimer) pageWindow.clearTimeout(gestureTimer);
+        gestureTimer = pageWindow.setTimeout(() => {
+          gestureTimer = 0;
+          if (contacts.size || activeTouches) continueGesture();
+          // Several finger placements can form one approach to the page ending.
+          // A quiet gap before reaching it must not consume the automatic reveal.
+          else if (finishingTouch && !atBottom()) return;
+          else finishingGesture = false;
+        }, 600);
       };
-      const noteActivity = () => {
-        lastActivityAt = pageWindow.performance.now();
-        inputSequence++;
-        clearPending();
-      };
-    
       const dismiss = () => {
-        if (destroyed) return;
-        clearPending();
-        if (blocked() || !isOpen()) return;
+        if (destroyed || blocked()) return;
+        stopGesture();
         panelScrollTop = null;
-        close();
+        if (isOpen()) close();
       };
-    
-      const planEndCheck = current => {
-        if (destroyed || consumed || blocked() || touching() || !current.atEnd) {
-          clearPending();
-          return;
-        }
-        if (isOpen()) {
-          // A manually visible prompt at the end already fulfils the end reveal.
-          consumed = true;
-          clearPending();
-          return;
-        }
-        if (quietTimer || stableFrame) return;
-        const sequence = inputSequence;
-        const delay = Math.max(0, quietMs - (pageWindow.performance.now() - lastActivityAt));
-        quietTimer = pageWindow.setTimeout(() => {
-          quietTimer = 0;
-          if (destroyed || sequence !== inputSequence || consumed || blocked() || touching()) return;
-          const before = geometry();
-          if (!before.atEnd) return;
-          const remainingQuiet = quietMs - (pageWindow.performance.now() - lastActivityAt);
-          if (remainingQuiet > 0) {
-            planEndCheck(before);
-            return;
-          }
-          stableFrame = pageWindow.requestAnimationFrame(() => {
-            stableFrame = 0;
-            if (destroyed || sequence !== inputSequence || consumed || blocked() || touching()) return;
-            const after = geometry();
-            if (!after.atEnd) return;
-            if (Math.abs(before.scrollTop - after.scrollTop) > 1
-              || Math.abs(before.available - after.available) > 1
-              || Math.abs(before.viewportHeight - after.viewportHeight) > 1) {
-              noteActivity();
-              planEndCheck(after);
-              return;
-            }
-            if (isOpen()) {
-              consumed = true;
-              return;
-            }
-            consumed = true;
-            panelScrollTop = after.actualScrollTop;
-            open();
-          });
-        }, delay);
-      };
-    
       const check = () => {
-        if (destroyed) return;
-        const current = geometry();
-        if (Math.abs(current.actualScrollTop - observedScrollTop) > .01) noteActivity();
-        observedScrollTop = current.actualScrollTop;
-        if (blocked()) {
-          clearPending();
-          return;
+        if (destroyed || blocked()) return;
+        const currentTop = top();
+        const completed = isEndingZone();
+        if (!completed) automaticShown = false;
+        if (isOpen()) {
+          if (panelScrollTop === null) panelScrollTop = currentTop;
+          else if (currentTop < panelScrollTop - 1) {
+            // Touch intent handles upward swipes. Browser viewport changes and
+            // overscroll rebound are not a new gesture to dismiss the panel.
+            if (finishingTouch) panelScrollTop = currentTop;
+            else dismiss();
+          }
+          else if (currentTop > panelScrollTop + 1) {
+            if (finishingGesture) { panelScrollTop = currentTop; continueGesture(); }
+            else if (finishingTouch) panelScrollTop = currentTop;
+            else dismiss();
+          }
+        } else panelScrollTop = null;
+        if (!automaticShown && completed) {
+          automaticShown = true;
+          if (!isOpen()) {
+            panelScrollTop = currentTop;
+            finishingGesture = true;
+            finishingTouch = touchInput;
+            open();
+            continueGesture();
+          }
         }
-        if (!isOpen()) panelScrollTop = null;
-        else if (panelScrollTop === null) panelScrollTop = current.actualScrollTop;
-        else if (Math.abs(current.actualScrollTop - panelScrollTop) > 1) dismiss();
-        planEndCheck(current);
       };
-    
       const toggle = () => {
         if (destroyed || blocked()) return;
-        if (isOpen()) {
-          // Explicitly closing the toggle at the end is distinct from the input
-          // which moves a previously manual panel to the end and dismisses it.
-          if (geometry().atEnd) consumed = true;
-          dismiss();
-          return;
-        }
-        clearPending();
-        const current = geometry();
-        if (current.atEnd) consumed = true;
-        panelScrollTop = current.actualScrollTop;
+        if (isOpen()) { dismiss(); return; }
+        stopGesture();
+        if (isEndingZone()) automaticShown = true;
+        panelScrollTop = top();
         open();
       };
-    
-      const onScroll = () => {
-        if (destroyed) return;
-        noteActivity();
-        check();
-      };
-      const onWheel = () => {
-        if (destroyed) return;
-        noteActivity();
-        // Wheel intent matters even when the page is already at its boundary.
-        dismiss();
+      const onWheel = event => {
+        if (destroyed || blocked()) return;
+        touchInput = false;
+        if (isOpen() && finishingGesture && event.deltaY > 0) continueGesture();
+        else dismiss();
         check();
       };
       const onResize = () => {
-        if (destroyed) return;
-        // Mobile browser panels can resize/clamp the document without a new gesture.
-        const current = geometry();
-        observedScrollTop = current.actualScrollTop;
-        if (isOpen()) panelScrollTop = current.actualScrollTop;
-        clearPending();
+        if (isOpen()) panelScrollTop = top();
         check();
       };
       const onPointerDown = event => {
-        if (destroyed) return;
-        if (event.pointerType === 'touch' || event.pointerType === 'pen') activePointers.add(event.pointerId);
-        noteActivity();
-        if (!insideConsole(event)) dismiss();
+        if (event.pointerType === 'touch' || event.pointerType === 'pen') contacts.add(event.pointerId);
+        if (event.pointerType === 'touch') { touchInput = true; check(); return; }
+        touchInput = false;
+        if (!inside(event)) dismiss();
         check();
       };
       const onPointerEnd = event => {
-        activePointers.delete(event.pointerId);
-        noteActivity();
+        contacts.delete(event.pointerId);
+        continueGesture();
         check();
       };
       const onTouchStart = event => {
-        if (destroyed) return;
-        activeTouches = event.touches ? event.touches.length : 1;
-        noteActivity();
-        if (!insideConsole(event)) dismiss();
+        activeTouches = event.touches?.length || 1;
+        touchInput = true;
+        const contact = event.touches?.[0];
+        touchGesture = { y: contact?.clientY ?? 0, moved: false, outside: !inside(event), startedOpen: isOpen() };
+        check();
+      };
+      const onTouchMove = event => {
+        const contact = event.touches?.[0];
+        if (!touchGesture || !contact || destroyed || blocked()) return;
+        const delta = contact.clientY - touchGesture.y;
+        if (Math.abs(delta) < 8) return;
+        touchGesture.y = contact.clientY;
+        touchGesture.moved = true;
+        if (!touchGesture.outside) return;
+        if (delta < 0 && isOpen() && finishingGesture) continueGesture();
+        else dismiss();
         check();
       };
       const onTouchEnd = event => {
-        activeTouches = event.touches ? event.touches.length : 0;
-        noteActivity();
+        activeTouches = event.touches?.length || 0;
+        if (!activeTouches) {
+          if (event.type !== 'touchcancel' && touchGesture?.outside && touchGesture.startedOpen && !touchGesture.moved) dismiss();
+          touchGesture = null;
+        }
+        continueGesture();
         check();
       };
       const onKeyDown = event => {
         if (destroyed || blocked()) return;
-        if (event.key === 'Escape') {
-          noteActivity();
-          dismiss();
-          return;
-        }
-        const target = event.target;
-        const editable = target && typeof target.closest === 'function'
-          && target.closest('input, textarea, select, [contenteditable=""], [contenteditable="true"]');
-        const scrollKey = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' ', 'Spacebar'].includes(event.key);
-        if (!scrollKey || editable || insideConsole(event)) return;
-        noteActivity();
-        dismiss();
+        touchInput = false;
+        if (event.key === 'Escape') { dismiss(); return; }
+        if (inside(event) || event.target?.closest?.('input,textarea,select,[contenteditable]')) return;
+        const forward = ['ArrowDown', 'PageDown', 'End', ' ', 'Spacebar'].includes(event.key);
+        if (!forward && !['ArrowUp', 'PageUp', 'Home'].includes(event.key)) return;
+        if (forward && isOpen() && finishingGesture) continueGesture();
+        else dismiss();
         check();
       };
-      const clearContacts = () => {
-        activePointers.clear();
-        activeTouches = 0;
-        clearPending();
+      const clearContacts = () => { contacts.clear(); activeTouches = 0; touchGesture = null; };
+      const listen = (target, type, fn, options) => {
+        target.addEventListener(type, fn, options);
+        listeners.push(() => target.removeEventListener(type, fn, options));
       };
-      const onVisibility = () => {
-        if (pageDocument.hidden) clearContacts();
-        else check();
-      };
-      const listen = (target, type, handler, options) => {
-        target.addEventListener(type, handler, options);
-        listeners.push(() => target.removeEventListener(type, handler, options));
-      };
-      const passiveCapture = { passive: true, capture: true };
-      listen(pageWindow, 'scroll', onScroll, { passive: true });
-      listen(pageWindow, 'wheel', onWheel, passiveCapture);
+      const capture = { passive: true, capture: true };
+      listen(pageWindow, 'scroll', check, { passive: true });
+      listen(pageWindow, 'wheel', onWheel, capture);
       listen(pageWindow, 'scrollend', check, { passive: true });
       listen(pageWindow, 'resize', onResize, { passive: true });
-      listen(pageWindow, 'pageshow', check, { passive: true });
-      listen(pageWindow, 'load', check, { passive: true });
-      listen(pageWindow, 'scrollslides:final-slide', check);
-      listen(pageWindow, 'vazuri:case-complete', check);
-      listen(pageWindow, 'focus', check, { passive: true });
+      for (const type of ['pageshow', 'load', 'focus']) listen(pageWindow, type, check, { passive: true });
       listen(pageWindow, 'blur', clearContacts, { passive: true });
-      listen(pageDocument, 'pointerdown', onPointerDown, passiveCapture);
-      listen(pageDocument, 'pointerup', onPointerEnd, passiveCapture);
-      listen(pageDocument, 'pointercancel', onPointerEnd, passiveCapture);
-      listen(pageDocument, 'touchstart', onTouchStart, passiveCapture);
-      listen(pageDocument, 'touchend', onTouchEnd, passiveCapture);
-      listen(pageDocument, 'touchcancel', onTouchEnd, passiveCapture);
+      listen(pageDocument, 'pointerdown', onPointerDown, capture);
+      for (const type of ['pointerup', 'pointercancel']) listen(pageDocument, type, onPointerEnd, capture);
+      listen(pageDocument, 'touchstart', onTouchStart, capture);
+      listen(pageDocument, 'touchmove', onTouchMove, capture);
+      for (const type of ['touchend', 'touchcancel']) listen(pageDocument, type, onTouchEnd, capture);
       listen(pageDocument, 'keydown', onKeyDown, true);
-      listen(pageDocument, 'visibilitychange', onVisibility, { passive: true });
+      listen(pageDocument, 'visibilitychange', () => { if (pageDocument.hidden) clearContacts(); else check(); });
       if (pageWindow.visualViewport) {
         listen(pageWindow.visualViewport, 'resize', onResize, { passive: true });
-        // A visual viewport scroll is not necessarily document movement.
         listen(pageWindow.visualViewport, 'scroll', check, { passive: true });
       }
       const destroy = () => {
         if (destroyed) return;
         destroyed = true;
-        clearPending();
-        activePointers.clear();
-        activeTouches = 0;
+        stopGesture();
+        clearContacts();
         listeners.splice(0).forEach(remove => remove());
       };
       check();
@@ -508,6 +453,7 @@
       isBlocked: () => !brief.hidden,
       open: () => setConsole(true),
       close: () => setConsole(false),
+      isEndingZone: () => consoleElement.classList.contains('is-puzzle-complete'),
     });
 
     const setPageLock = (locked) => {
@@ -545,6 +491,7 @@
     };
 
     const openBrief = () => {
+      completionLifecycle.dismiss();
       setConsole(false);
       resetBrief();
       lastFocus = document.activeElement;

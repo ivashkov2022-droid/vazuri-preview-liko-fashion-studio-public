@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "key": "altera",
+  "masterLifecycleExact": true,
+  "outsideAllowedJSChangesIdentical": true,
+  "existingCSSByteIdentical": true,
+  "formCSSUnchanged": true,
+  "pageBodiesPreserved": 1,
+  "frozenDeltaVerified": 3
+}

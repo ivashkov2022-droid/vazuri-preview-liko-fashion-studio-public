@@ -1,0 +1,29 @@
+{
+  "schema": "vazuri/case-banner-family-source-package/v1",
+  "key": "altera",
+  "project": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "serverCase": "vazuri-preview-liko-fashion-studio-public",
+  "sourceParentCommit": "a866db9f2ff125050757d18837c8fc4f32e55446",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "ca5b2b4b8fb803a50fda7c1f16c60aaf13baf47e6ee1a07359cea971b9de90c9",
+    "public/vazuri-case-dock.css": "afdbc8887b763971c9ea0e298b4c1b64e245c204a81ddc139e8934ebeec0dd6a",
+    "app/layout.tsx": "a3130989ed105d868195ee0929e09cbb9f492b2aae4a632ec477bad56f771ecc"
+  },
+  "ledgerSHA256": "6dcde8170fe1cf80984a7b8c31c08f39a7072c26a2142646a96c86b924de6d76",
+  "qaSummarySHA256": "12bf12e5aba1b8d9a457618c7fdba83611ef77db134f69b7f2ecfa0a837697e9",
+  "staticReviewSHA256": "77c53316dbb968a7498b7bb03e79ba58610ba6a90dd694f093cc58566e30e8fa",
+  "frozenBase": {
+    "repository": "https://github.com/ivashkov2022-droid/vazuri-site",
+    "ref": "vazuri-io-live-20261025-110217",
+    "commit": "e3812568b20e0fb64c3f60b7aa02f8b698e48937",
+    "runtimePrefix": "published/vazuri-io/vazuri-preview-liko-fashion-studio-public",
+    "url": "https://github.com/ivashkov2022-droid/vazuri-site/tree/vazuri-io-live-20261025-110217/published/vazuri-io/vazuri-preview-liko-fashion-studio-public"
+  },
+  "runtimeDeltaFiles": [
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.css",
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js",
+    "vazuri-preview-liko-fashion-studio-public/index.html"
+  ],
+  "fullRestoredRuntimeFiles": 47,
+  "runtimeStorage": "Only exact delta bytes are stored in Git; restore them over the immutable base and verify CURRENT-MANIFEST.json."
+}

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const dockAssetVersion = "20261025-wheel-end-v2";
+const dockCssVersion = "family-v13-afdbc8887b76";
+const dockJsVersion = "family-v13-ca5b2b4b8fb8";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -83,12 +84,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {children}
-        <link rel="stylesheet" href={`${assetBase}/vazuri-case-dock.css?v=${dockAssetVersion}`} />
+        <link rel="stylesheet" href={`${assetBase}/vazuri-case-dock.css?v=${dockCssVersion}`} />
         <script
           defer
-          src={`${assetBase}/vazuri-case-dock.js?v=${dockAssetVersion}`}
+          src={`${assetBase}/vazuri-case-dock.js?v=${dockJsVersion}`}
           data-vazuri-dock
-          data-vazuri-lang="ru"
+          data-vazuri-lang="en"
           data-vazuri-case="ALTERA"
           data-vazuri-theme="altera"
           data-vazuri-source="case-altera"
