@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "scope": "Use one canonical completion lifecycle across all nine cases: once at physical page end after ending gesture quiet; next input dismisses even at a scroll boundary; native beacon click or keyboard reopens. Preserve cube progression, palette, black arrow, transparent surface, form and all case content/media.",
+  "validation": {
+    "profiles": 3,
+    "checks": 246,
+    "passed": 246,
+    "failed": 0,
+    "valid": true
+  },
+  "lifecycleValidation": {
+    "profiles": 3,
+    "checks": 92,
+    "passed": 92,
+    "failed": 0
+  },
+  "controllerUnitChecks": 24,
+  "sourceIntegrity": {
+    "key": "altera",
+    "canonicalLifecycleSha256": "53532691d5ad47787710afdc3e05d59e62ce73a6562e07abf20daa81a678a7f1",
+    "sameControllerAcrossAllCases": true,
+    "onlyCompletionInteractionAndFormPoseGuardChanged": true,
+    "all49CubeGeometryOrderPaletteAndMotionMathUnchanged": true,
+    "blackArrowAndTransparentSurfaceUnchanged": true,
+    "CSSUnchanged": true,
+    "pageContentMediaAndFormsUnchanged": true,
+    "onceAtPhysicalEndAfterGestureQuiet": true,
+    "nextInputDismissAndManualClickReopen": true,
+    "sourceInverseVerbatim": true
+  },
+  "candidate": {
+    "key": "altera",
+    "serverCase": "vazuri-preview-liko-fashion-studio-public",
+    "previous": "/srv/www/vazuri.io/releases/20261024T164925Z-relief-banner-dismiss-v1",
+    "changed": [
+      "vazuri-case-dock.js",
+      "index.html"
+    ],
+    "hashes": {
+      "vazuri-case-dock.js": "0bde2bc388f1ba3bfb18058a0b9dabb7cbaa11128c07087c068fbe55552f59cc",
+      "index.html": "0df2492001244e69c4edeca036dad869b065f2f1eba6e9eabb2be5845390b658"
+    },
+    "before": {
+      "vazuri-case-dock.js": "622736281805b0f29fd2fc1afaf55dfff88b0de5cd85073c65cd8126b428171d",
+      "index.html": "09d62811139ae987d8867441b22ca71868add359327710d6c05f06dfe7f9195c"
+    },
+    "htmlChanged": 1,
+    "allMediaAndPageContentUnchanged": true,
+    "allCSSUnchanged": true,
+    "productionSEOAndHydrationMarkupRetained": true,
+    "onlyCompletionLifecycleAndCacheVersionsChanged": true
+  }
+}
