@@ -89,7 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           defer
           src={`${assetBase}/vazuri-case-dock.js?v=${dockJsVersion}`}
           data-vazuri-dock
-          data-vazuri-lang="en"
+          data-vazuri-lang="ru"
           data-vazuri-case="ALTERA"
           data-vazuri-theme="altera"
           data-vazuri-source="case-altera"

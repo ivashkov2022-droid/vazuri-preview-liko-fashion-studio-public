@@ -1,0 +1,22 @@
+{
+  "schema": "vazuri/altera-overlay-ru/v1",
+  "previous": "/srv/www/vazuri.io/releases/20261025T163601Z-case-banner-family-v13",
+  "expectedRelease": "/srv/www/vazuri.io/releases/20261025T172117Z-altera-overlay-ru-v14",
+  "releaseName": "20261025T172117Z-altera-overlay-ru-v14",
+  "sourceProject": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "sourceFile": "app/layout.tsx",
+  "sourceParent": "a85706e0064d0619328a6be4a8ce2b9d2797c5d9",
+  "sourceBeforeSHA256": "a3130989ed105d868195ee0929e09cbb9f492b2aae4a632ec477bad56f771ecc",
+  "sourceSHA256": "56c917e29885e9f7bc3983e17b7914627779ec7aa5faddb4cbb2363b58571766",
+  "runtimeFile": "vazuri-preview-liko-fashion-studio-public/index.html",
+  "runtimeBeforeSHA256": "6537639d3bad8a348e5633d71e635c629c648dc8da0e2e0e214a51cfc8ca56ed",
+  "runtimeSHA256": "d306700da0c69e48bf94aaf4e10995631ceb52be29a129f1a7ac44b161c8924f",
+  "runtimeSize": 19291,
+  "url": "https://vazuri.io/altera/",
+  "localURL": "http://127.0.0.1:4473/altera/",
+  "overlayLanguage": "ru",
+  "bodyLanguage": "en",
+  "actualAndSerializedLanguagePropsOnly": true,
+  "allOtherHTMLBytesIdentical": true,
+  "sourceSingleAttributeOnly": true
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "vazuri/altera-overlay-ru-source-package/v1",
+  "sourceParent": "a85706e0064d0619328a6be4a8ce2b9d2797c5d9",
+  "sourceFile": "app/layout.tsx",
+  "sourceBeforeSHA256": "a3130989ed105d868195ee0929e09cbb9f492b2aae4a632ec477bad56f771ecc",
+  "sourceSHA256": "56c917e29885e9f7bc3983e17b7914627779ec7aa5faddb4cbb2363b58571766",
+  "candidateSHA256": "cbddf2c423cfbf93025ca74f32ebf9ba522aa19e8c664c81e1bc6acf6f88617c",
+  "qaSHA256": "49de4a597abb6db174e59f3b19b69dbf7f296fb8303d4bebcfad1fd02cf3a3cd",
+  "runtimeFile": "vazuri-preview-liko-fashion-studio-public/index.html",
+  "runtimeSHA256": "d306700da0c69e48bf94aaf4e10995631ceb52be29a129f1a7ac44b161c8924f",
+  "verifiedV13PublishedArchive": {
+    "path": "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\projects\\altera-concept-public\\vazuri-preview-liko-fashion-studio-public-main\\release\\vazuri-preview-liko-fashion-studio-public-main-20261025T163601Z-case-banner-family-v13-published-complete-current.zip",
+    "sha256": "a1a0d1fd12f51b73aa4e763862473635e7316c5b35ad6cafea1e2fa48d026650",
+    "sourceCommit": "a85706e0064d0619328a6be4a8ce2b9d2797c5d9",
+    "runtimeFiles": 47
+  },
+  "change": "Only the overlay language returns to Russian; English case body, CSS/JS versions, layout and mechanics are unchanged."
+}
