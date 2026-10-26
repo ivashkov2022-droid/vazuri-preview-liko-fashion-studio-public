@@ -1,0 +1,32 @@
+{
+  "schema": "vazuri/case-phone-required-source-package/v1",
+  "key": "altera",
+  "sourceParent": "6178a1ac0feb75ee6cae8ede3d8cff305c457fb7",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "a2be434e6ea2e6ad199caa4236f193e70596376b578fb2f242e6d7cae417d3e9",
+    "app/layout.tsx": "f540b4f583f430af2eabb45051511827c83c121f41a6e26a78d5cb1bef2913e3"
+  },
+  "sourceGitBlobSHA256": {
+    "public/vazuri-case-dock.js": "a2be434e6ea2e6ad199caa4236f193e70596376b578fb2f242e6d7cae417d3e9",
+    "app/layout.tsx": "f540b4f583f430af2eabb45051511827c83c121f41a6e26a78d5cb1bef2913e3"
+  },
+  "ledgerSHA256": "b9e72b8315a360b23330e8191732d1587c5fbf805bd5f1f0cb16b22929d572e2",
+  "qaSummarySHA256": "b8c04ca43d3d3d5dcea9dec19519e1d4796ec5b57049797cc796b202adc5afb5",
+  "baselineReportSHA256": "0b23ae267d089831cecde5b430633f9330747ccb81d7c5b38002ee5198ae9091",
+  "runtimeDeltaFiles": 2,
+  "fullBaseRuntimeFiles": 47,
+  "verifiedRuntimeBase": {
+    "archivePath": "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\projects\\altera-concept-public\\vazuri-preview-liko-fashion-studio-public-main\\release\\altera-ru-v14-complete-current.zip",
+    "archiveSHA256": "61c432d360e75d04f767094d37bce4c564c405e8b195f6c8182a61e4e6b658e4",
+    "sourceCommit": "6178a1ac0feb75ee6cae8ede3d8cff305c457fb7",
+    "sourceProofFile": "audit/altera-overlay-ru-20261025/complete-current-archive.json",
+    "sourceProofSHA256": "157817a467a3d2b971acad331ff6f4c2b5353bf1698adda9bf6de2003668d75f"
+  },
+  "requiredFields": [
+    "name",
+    "phone",
+    "contact",
+    "consent"
+  ],
+  "languagePolicy": "Preserve the actual live overlay and case languages. This source finalizer never rewrites language or palette."
+}

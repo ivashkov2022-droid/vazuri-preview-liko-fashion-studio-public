@@ -1,0 +1,69 @@
+{
+  "schema": "vazuri/case-phone-required-case/v1",
+  "key": "altera",
+  "project": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "sourceProject": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "serverCase": "vazuri-preview-liko-fashion-studio-public",
+  "sourceParent": "6178a1ac0feb75ee6cae8ede3d8cff305c457fb7",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "a2be434e6ea2e6ad199caa4236f193e70596376b578fb2f242e6d7cae417d3e9",
+    "app/layout.tsx": "f540b4f583f430af2eabb45051511827c83c121f41a6e26a78d5cb1bef2913e3"
+  },
+  "intendedDelta": {
+    "vazuri-preview-liko-fashion-studio-public/index.html": {
+      "sha256": "cf1c0a1dd47a165e68abee59ae8765528e381d3b4f9135bc56e5c5743fe9edbc",
+      "size": 19289,
+      "mode": "0o444"
+    },
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js": {
+      "sha256": "a2be434e6ea2e6ad199caa4236f193e70596376b578fb2f242e6d7cae417d3e9",
+      "size": 33389,
+      "mode": "0o444"
+    }
+  },
+  "delta": [
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "sha256": "cf1c0a1dd47a165e68abee59ae8765528e381d3b4f9135bc56e5c5743fe9edbc",
+      "size": 19289,
+      "mode": "0o444"
+    },
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js",
+      "sha256": "a2be434e6ea2e6ad199caa4236f193e70596376b578fb2f242e6d7cae417d3e9",
+      "size": 33389,
+      "mode": "0o444"
+    }
+  ],
+  "deletedFiles": [],
+  "routes": [
+    {
+      "url": "https://vazuri.io/altera/",
+      "localPath": "/altera/",
+      "bodyLanguage": "en",
+      "overlayLanguage": "ru",
+      "runtimeFile": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "caseName": "ALTERA",
+      "source": "case-altera"
+    }
+  ],
+  "palette": {
+    "paper": "#eee3d3",
+    "ink": "#181512",
+    "accent": "#c99869"
+  },
+  "preservedPageBodies": [
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "overlayLanguage": "ru",
+      "outsideOverlayUnchanged": true
+    }
+  ],
+  "requiredFields": [
+    "name",
+    "phone",
+    "contact",
+    "consent"
+  ],
+  "baselineReportSHA256": "0b23ae267d089831cecde5b430633f9330747ccb81d7c5b38002ee5198ae9091"
+}

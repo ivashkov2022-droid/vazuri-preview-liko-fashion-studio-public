@@ -26,6 +26,7 @@
           lead: 'We will reply personally',
           leadCompact: 'We will reply personally',
           namePlaceholder: 'Your name',
+          phonePlaceholder: 'Phone',
           contactPlaceholder: 'Email or Telegram',
           interest: 'What would you like to create?',
           options: [
@@ -64,6 +65,7 @@
           lead: 'Ответим лично',
           leadCompact: 'Ответим лично',
           namePlaceholder: 'Ваше имя',
+          phonePlaceholder: 'Телефон',
           contactPlaceholder: 'Email или Telegram',
           interest: 'Что нужно сделать?',
           options: [
@@ -193,6 +195,9 @@
                   <input name="name" autocomplete="off" autocapitalize="words" data-1p-ignore data-lpignore="true" aria-label="${escapeHtml(copy.namePlaceholder)}" placeholder="${escapeHtml(copy.namePlaceholder)}" maxlength="120" required>
                 </label>
                 <label class="v2-brief__field">
+                  <input name="phone" type="tel" inputmode="tel" autocomplete="off" data-1p-ignore data-lpignore="true" aria-label="${escapeHtml(copy.phonePlaceholder)}" placeholder="${escapeHtml(copy.phonePlaceholder)}" maxlength="40" required>
+                </label>
+                <label class="v2-brief__field" style="animation-delay:330ms">
                   <input name="contact" autocomplete="off" autocapitalize="none" data-1p-ignore data-lpignore="true" aria-label="${escapeHtml(copy.contactPlaceholder)}" placeholder="${escapeHtml(copy.contactPlaceholder)}" maxlength="180" required>
                 </label>
                 <fieldset class="v2-brief__choices">
@@ -235,6 +240,7 @@
     const submitLabel = submit.querySelector('span');
     const briefClose = root.querySelector('.v2-brief__close');
     const nameInput = form.elements.namedItem('name');
+    const phoneInput = form.elements.namedItem('phone');
     const contactInput = form.elements.namedItem('contact');
     const consentInput = form.elements.namedItem('consent');
     let lastFocus = null;
@@ -485,9 +491,9 @@
     };
 
     const updateFormProgress = () => {
-      const completed = [nameInput.value.trim(), contactInput.value.trim(), consentInput.checked]
+      const completed = [nameInput.value.trim(), phoneInput.value.trim(), contactInput.value.trim(), consentInput.checked]
         .reduce((total, value) => total + Number(Boolean(value)), 0);
-      form.style.setProperty('--v2-form-progress', Math.max(0.06, completed / 3).toFixed(3));
+      form.style.setProperty('--v2-form-progress', Math.max(0.06, completed / 4).toFixed(3));
     };
 
     const openBrief = () => {
@@ -595,6 +601,7 @@
     window.visualViewport?.addEventListener('resize', scheduleProgress);
     window.visualViewport?.addEventListener('scroll', scheduleProgress);
     nameInput.addEventListener('input', updateFormProgress);
+    phoneInput.addEventListener('input', updateFormProgress);
     contactInput.addEventListener('input', updateFormProgress);
     consentInput.addEventListener('change', updateFormProgress);
 
@@ -602,6 +609,7 @@
       event.preventDefault();
       if (!form.reportValidity()) return;
       const formData = new FormData(form);
+      const phone = String(formData.get('phone') || '').trim();
       submit.disabled = true;
       submitLabel.textContent = copy.sending;
       feedback.textContent = '';
@@ -619,7 +627,7 @@
             name: formData.get('name') || '',
             contact: formData.get('contact') || '',
             company: '',
-            message: `${caseName}. ${lang === 'en' ? 'Request' : 'Запрос'}: ${formData.get('interest') || copy.options[0][1]}.`,
+            message: `${caseName}. ${lang === 'en' ? 'Request' : 'Запрос'}: ${formData.get('interest') || copy.options[0][1]}.\n${copy.phonePlaceholder}: ${phone}`,
             consent: formData.get('consent') || '',
           }),
         });
