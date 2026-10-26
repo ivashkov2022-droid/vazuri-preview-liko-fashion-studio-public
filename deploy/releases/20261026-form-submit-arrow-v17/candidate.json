@@ -1,0 +1,84 @@
+{
+  "key": "altera",
+  "project": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "sourceProject": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "serverCase": "vazuri-preview-liko-fashion-studio-public",
+  "routes": [
+    {
+      "url": "https://vazuri.io/altera/",
+      "localPath": "/altera/",
+      "bodyLanguage": "en",
+      "overlayLanguage": "ru",
+      "runtimeFile": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "caseName": "ALTERA",
+      "source": "case-altera"
+    }
+  ],
+  "palette": {
+    "paper": "#eee3d3",
+    "ink": "#181512",
+    "accent": "#c99869"
+  },
+  "requiredFields": [
+    "name",
+    "phone",
+    "contact",
+    "consent"
+  ],
+  "schema": "vazuri/form-submit-arrow-case/v1",
+  "sourceParent": "efe6a0374cda31b96cef510e28f8162cf1602a43",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+    "app/layout.tsx": "68977bd7f0005c3377c9ce95adab75c7f2774759bb195dfc518a56c083530206"
+  },
+  "intendedDelta": {
+    "vazuri-preview-liko-fashion-studio-public/index.html": {
+      "sha256": "75c59fa95ad7c6cfa8cd47bc6ec243ea10ea6b000e4436deb0bb006f1a43f99d",
+      "size": 19303,
+      "mode": "0o444"
+    },
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js": {
+      "sha256": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+      "size": 33588,
+      "mode": "0o444"
+    }
+  },
+  "delta": [
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "sha256": "75c59fa95ad7c6cfa8cd47bc6ec243ea10ea6b000e4436deb0bb006f1a43f99d",
+      "size": 19303,
+      "mode": "0o444"
+    },
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js",
+      "sha256": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+      "size": 33588,
+      "mode": "0o444"
+    }
+  ],
+  "deletedFiles": [],
+  "preservedPageBodies": [
+    {
+      "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+      "outsideOverlayUnchanged": true
+    }
+  ],
+  "baselineReportSHA256": "dd5f2fa9cae3fb9a5718873e37a6f07879d136e62a418b829036484814c32668",
+  "arrowSpec": {
+    "size": 20,
+    "bannerSize": 24,
+    "direction": "up-right",
+    "viewBox": "0 0 24 24",
+    "groupTransform": "rotate(135 11.5 11.5)",
+    "shaft": "M1 10H22V13H1Z",
+    "wingIndices": [
+      3,
+      9,
+      15,
+      29,
+      37,
+      45
+    ]
+  }
+}

@@ -207,7 +207,7 @@
                   </div>
                 </fieldset>
                 <label class="v2-brief__consent"><input name="consent" type="checkbox" value="yes" required><span>${escapeHtml(copy.consent)}</span></label>
-                <button class="v2-brief__submit" type="submit"><span>${escapeHtml(copy.submit)}</span><b aria-hidden="true">↗</b></button>
+                <button class="v2-brief__submit" type="submit"><span>${escapeHtml(copy.submit)}</span>${panelArrow(true).replace('class="v2-console__pixel-arrow"', 'class="v2-brief__submit-arrow" style="display:block;flex:0 0 20px;width:20px;height:20px;fill:currentColor;shape-rendering:geometricPrecision;pointer-events:none"')}</button>
                 <p class="v2-brief__feedback" aria-live="polite"></p>
               </form>
             </div>

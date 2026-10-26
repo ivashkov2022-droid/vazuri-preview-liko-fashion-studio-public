@@ -1,0 +1,33 @@
+{
+  "schema": "vazuri/form-submit-arrow-source-package/v1",
+  "key": "altera",
+  "sourceParent": "efe6a0374cda31b96cef510e28f8162cf1602a43",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+    "app/layout.tsx": "68977bd7f0005c3377c9ce95adab75c7f2774759bb195dfc518a56c083530206"
+  },
+  "sourceGitBlobSHA256": {
+    "public/vazuri-case-dock.js": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+    "app/layout.tsx": "68977bd7f0005c3377c9ce95adab75c7f2774759bb195dfc518a56c083530206"
+  },
+  "ledgerSHA256": "feb7b72f4a43b3b94fa3a25b4b0648da58d885a86c516d1ebe972027f019dce0",
+  "qaSummarySHA256": "a9d4fc4b92b7f415706aa198bae8c400e75525f97f47acb52d213cc7475b14ff",
+  "baselineReportSHA256": "dd5f2fa9cae3fb9a5718873e37a6f07879d136e62a418b829036484814c32668",
+  "runtimeDeltaFiles": 2,
+  "fullBaseRuntimeFiles": 47,
+  "verifiedRuntimeBase": {
+    "archivePath": "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\projects\\altera-concept-public\\vazuri-preview-liko-fashion-studio-public-main\\release\\vazuri-preview-liko-fashion-studio-public-main-case-phone-required-v16-complete-current.zip",
+    "archiveSHA256": "70a70640813154bb597286992ec9a3da8fc7f226f848ba8d8a264855bd3435c4",
+    "sourceCommit": "efe6a0374cda31b96cef510e28f8162cf1602a43",
+    "sourceProofFile": "audit/case-phone-required-20261026/published-archives.json",
+    "sourceProofSHA256": "80f7e5de8ff9b8ce4fadb2c658e7813ef4987bdbaa0d11fd32ab12fa1d92b773"
+  },
+  "requiredFields": [
+    "name",
+    "phone",
+    "contact",
+    "consent"
+  ],
+  "submitArrowPolicy": "Reuse the existing diagonal banner glyph without changing CSS or form controls.",
+  "languagePolicy": "Preserve the actual live overlay and case languages. This source finalizer never rewrites language or palette."
+}

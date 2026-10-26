@@ -1,0 +1,5030 @@
+{
+  "schema": "vazuri/form-submit-arrow-browser-qa/v1",
+  "key": "altera",
+  "mode": "local",
+  "valid": true,
+  "localQAPassed": true,
+  "liveQAPassed": false,
+  "candidateSHA256": "feb7b72f4a43b3b94fa3a25b4b0648da58d885a86c516d1ebe972027f019dce0",
+  "liveBinding": null,
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "b10c548efb52dd60daa6afcd229c1551dd3debf8e302c58c630222dfa9bca8e7",
+    "app/layout.tsx": "68977bd7f0005c3377c9ce95adab75c7f2774759bb195dfc518a56c083530206"
+  },
+  "summary": {
+    "profiles": 3,
+    "checks": 60,
+    "passed": 60,
+    "failed": 0
+  },
+  "fixture": "Only exact submit icon differs from v16. Local baseline GETs use /__baseline; live mode uses no baseline GET. Every POST is fulfilled locally; other write methods abort. Pixel geometry, normalized raster, currentColor, padding, required controls and unchanged payload checked.",
+  "checks": [
+    {
+      "profile": "ru-1440x900",
+      "name": "exact frozen candidate HTML loads",
+      "passed": true,
+      "detail": {
+        "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+        "SHA256": "75c59fa95ad7c6cfa8cd47bc6ec243ea10ea6b000e4436deb0bb006f1a43f99d"
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "submit is exactly20x20 and banner exactly24x24",
+      "passed": true,
+      "detail": {
+        "submit": {
+          "x": 1362,
+          "y": 741.65625,
+          "width": 20,
+          "height": 20,
+          "top": 741.65625,
+          "right": 1382,
+          "bottom": 761.65625,
+          "left": 1362
+        },
+        "banner": {
+          "x": 1380,
+          "y": 614,
+          "width": 24,
+          "height": 24,
+          "top": 614,
+          "right": 1404,
+          "bottom": 638,
+          "left": 1380
+        }
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "exact master geometry viewBox rotation shaft and six wing cells",
+      "passed": true,
+      "detail": {
+        "viewBox": "0 0 24 24",
+        "groups": [
+          "rotate(135 11.5 11.5)"
+        ],
+        "parts": [
+          {
+            "tag": "path",
+            "attrs": {
+              "d": "M1 10H22V13H1Z"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "1",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "4",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "7",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "13",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "16",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "19",
+              "width": "3",
+              "height": "3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "normalized rendered pixel mask exactly equals the banner arrow",
+      "passed": true,
+      "detail": {
+        "submit": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "banner": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad"
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "submit pieces visible static when banner aside is closed",
+      "passed": true,
+      "detail": [
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        }
+      ]
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "arrow centered vertically and inside exact right padding",
+      "passed": true,
+      "detail": {
+        "icon": {
+          "x": 1362,
+          "y": 741.65625,
+          "width": 20,
+          "height": 20,
+          "top": 741.65625,
+          "right": 1382,
+          "bottom": 761.65625,
+          "left": 1362
+        },
+        "button": {
+          "x": 941,
+          "y": 721.65625,
+          "width": 459,
+          "height": 60,
+          "top": 721.65625,
+          "right": 1400,
+          "bottom": 781.65625,
+          "left": 941
+        },
+        "pad": 18,
+        "border": 0
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "four required controls and localization unchanged",
+      "passed": true,
+      "detail": [
+        "name",
+        "phone",
+        "contact",
+        "consent"
+      ]
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "baseline route loads",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "banner geometry and normalized raster unchanged from v16",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "baseline form DOM exact except the submit icon",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "form drawer button label and field geometry/styles unchanged",
+      "passed": true,
+      "detail": {
+        "before": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 941,
+            "y": 273.65625,
+            "width": 459,
+            "height": 508,
+            "top": 273.65625,
+            "right": 1400,
+            "bottom": 781.65625,
+            "left": 941
+          },
+          "drawer": {
+            "x": 900,
+            "y": 0,
+            "width": 540,
+            "height": 900,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "left": 900
+          },
+          "button": {
+            "x": 941,
+            "y": 721.65625,
+            "width": 459,
+            "height": 60,
+            "top": 721.65625,
+            "right": 1400,
+            "bottom": 781.65625,
+            "left": 941
+          },
+          "label": {
+            "x": 959,
+            "y": 746.65625,
+            "width": 100.78125,
+            "height": 10,
+            "top": 746.65625,
+            "right": 1059.78125,
+            "bottom": 756.65625,
+            "left": 959
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(238, 227, 211)",
+            "borderRight": "0px none rgb(238, 227, 211)",
+            "borderBottom": "0px none rgb(238, 227, 211)",
+            "borderLeft": "0px none rgb(238, 227, 211)",
+            "backgroundColor": "rgb(24, 21, 18)",
+            "color": "rgb(238, 227, 211)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 941,
+                "y": 274.65625,
+                "width": 459,
+                "height": 66,
+                "top": 274.65625,
+                "right": 1400,
+                "bottom": 340.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 941,
+                "y": 340.65625,
+                "width": 459,
+                "height": 66,
+                "top": 340.65625,
+                "right": 1400,
+                "bottom": 406.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 941,
+                "y": 406.65625,
+                "width": 459,
+                "height": 66,
+                "top": 406.65625,
+                "right": 1400,
+                "bottom": 472.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 1440,
+          "width": 1440
+        },
+        "after": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 941,
+            "y": 273.65625,
+            "width": 459,
+            "height": 508,
+            "top": 273.65625,
+            "right": 1400,
+            "bottom": 781.65625,
+            "left": 941
+          },
+          "drawer": {
+            "x": 900,
+            "y": 0,
+            "width": 540,
+            "height": 900,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "left": 900
+          },
+          "button": {
+            "x": 941,
+            "y": 721.65625,
+            "width": 459,
+            "height": 60,
+            "top": 721.65625,
+            "right": 1400,
+            "bottom": 781.65625,
+            "left": 941
+          },
+          "label": {
+            "x": 959,
+            "y": 746.65625,
+            "width": 100.78125,
+            "height": 10,
+            "top": 746.65625,
+            "right": 1059.78125,
+            "bottom": 756.65625,
+            "left": 959
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(238, 227, 211)",
+            "borderRight": "0px none rgb(238, 227, 211)",
+            "borderBottom": "0px none rgb(238, 227, 211)",
+            "borderLeft": "0px none rgb(238, 227, 211)",
+            "backgroundColor": "rgb(24, 21, 18)",
+            "color": "rgb(238, 227, 211)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 941,
+                "y": 274.65625,
+                "width": 459,
+                "height": 66,
+                "top": 274.65625,
+                "right": 1400,
+                "bottom": 340.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 941,
+                "y": 340.65625,
+                "width": 459,
+                "height": 66,
+                "top": 340.65625,
+                "right": 1400,
+                "bottom": 406.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 941,
+                "y": 406.65625,
+                "width": 459,
+                "height": 66,
+                "top": 406.65625,
+                "right": 1400,
+                "bottom": 472.65625,
+                "left": 941
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 1440,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "actual HTML language attribute remains unchanged",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "baseline valid request mocked locally",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "currentColor follows submit text during rest",
+      "passed": true,
+      "detail": {
+        "text": "rgb(238, 227, 211)",
+        "fill": "rgb(238, 227, 211)",
+        "pieces": [
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "currentColor follows submit text during hover",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "currentColor follows submit text during focus",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "empty required form blocks submission",
+      "passed": true
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "valid mocked payload exactly matches v16 baseline or verified local result",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        },
+        "expected": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      }
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "all write requests intercepted locally",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "profile": "ru-1440x900",
+      "name": "no candidate or baseline JavaScript/resource errors",
+      "passed": true,
+      "detail": {
+        "page": [],
+        "network": [],
+        "baseline": [],
+        "baselineNetwork": []
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "exact frozen candidate HTML loads",
+      "passed": true,
+      "detail": {
+        "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+        "SHA256": "75c59fa95ad7c6cfa8cd47bc6ec243ea10ea6b000e4436deb0bb006f1a43f99d"
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "submit is exactly20x20 and banner exactly24x24",
+      "passed": true,
+      "detail": {
+        "submit": {
+          "x": 690,
+          "y": 712.65625,
+          "width": 20,
+          "height": 20,
+          "top": 712.65625,
+          "right": 710,
+          "bottom": 732.65625,
+          "left": 690
+        },
+        "banner": {
+          "x": 708,
+          "y": 713.203125,
+          "width": 24,
+          "height": 24,
+          "top": 713.203125,
+          "right": 732,
+          "bottom": 737.203125,
+          "left": 708
+        }
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "exact master geometry viewBox rotation shaft and six wing cells",
+      "passed": true,
+      "detail": {
+        "viewBox": "0 0 24 24",
+        "groups": [
+          "rotate(135 11.5 11.5)"
+        ],
+        "parts": [
+          {
+            "tag": "path",
+            "attrs": {
+              "d": "M1 10H22V13H1Z"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "1",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "4",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "7",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "13",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "16",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "19",
+              "width": "3",
+              "height": "3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "normalized rendered pixel mask exactly equals the banner arrow",
+      "passed": true,
+      "detail": {
+        "submit": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "banner": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad"
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "submit pieces visible static when banner aside is closed",
+      "passed": true,
+      "detail": [
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(24, 21, 18)",
+          "stroke": "none",
+          "filter": "none"
+        }
+      ]
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "arrow centered vertically and inside exact right padding",
+      "passed": true,
+      "detail": {
+        "icon": {
+          "x": 690,
+          "y": 712.65625,
+          "width": 20,
+          "height": 20,
+          "top": 712.65625,
+          "right": 710,
+          "bottom": 732.65625,
+          "left": 690
+        },
+        "button": {
+          "x": 269,
+          "y": 692.65625,
+          "width": 459,
+          "height": 60,
+          "top": 692.65625,
+          "right": 728,
+          "bottom": 752.65625,
+          "left": 269
+        },
+        "pad": 18,
+        "border": 0
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "four required controls and localization unchanged",
+      "passed": true,
+      "detail": [
+        "name",
+        "phone",
+        "contact",
+        "consent"
+      ]
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "baseline route loads",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "banner geometry and normalized raster unchanged from v16",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "baseline form DOM exact except the submit icon",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "form drawer button label and field geometry/styles unchanged",
+      "passed": true,
+      "detail": {
+        "before": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 269,
+            "y": 244.65625,
+            "width": 459,
+            "height": 508,
+            "top": 244.65625,
+            "right": 728,
+            "bottom": 752.65625,
+            "left": 269
+          },
+          "drawer": {
+            "x": 228,
+            "y": 0,
+            "width": 540,
+            "height": 1024,
+            "top": 0,
+            "right": 768,
+            "bottom": 1024,
+            "left": 228
+          },
+          "button": {
+            "x": 269,
+            "y": 692.65625,
+            "width": 459,
+            "height": 60,
+            "top": 692.65625,
+            "right": 728,
+            "bottom": 752.65625,
+            "left": 269
+          },
+          "label": {
+            "x": 287,
+            "y": 717.65625,
+            "width": 100.78125,
+            "height": 10,
+            "top": 717.65625,
+            "right": 387.78125,
+            "bottom": 727.65625,
+            "left": 287
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(24, 21, 18)",
+            "borderRight": "0px none rgb(24, 21, 18)",
+            "borderBottom": "0px none rgb(24, 21, 18)",
+            "borderLeft": "0px none rgb(24, 21, 18)",
+            "backgroundColor": "rgb(201, 152, 105)",
+            "color": "rgb(24, 21, 18)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 269,
+                "y": 245.65625,
+                "width": 459,
+                "height": 66,
+                "top": 245.65625,
+                "right": 728,
+                "bottom": 311.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 269,
+                "y": 311.65625,
+                "width": 459,
+                "height": 66,
+                "top": 311.65625,
+                "right": 728,
+                "bottom": 377.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 269,
+                "y": 377.65625,
+                "width": 459,
+                "height": 66,
+                "top": 377.65625,
+                "right": 728,
+                "bottom": 443.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 768,
+          "width": 768
+        },
+        "after": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 269,
+            "y": 244.65625,
+            "width": 459,
+            "height": 508,
+            "top": 244.65625,
+            "right": 728,
+            "bottom": 752.65625,
+            "left": 269
+          },
+          "drawer": {
+            "x": 228,
+            "y": 0,
+            "width": 540,
+            "height": 1024,
+            "top": 0,
+            "right": 768,
+            "bottom": 1024,
+            "left": 228
+          },
+          "button": {
+            "x": 269,
+            "y": 692.65625,
+            "width": 459,
+            "height": 60,
+            "top": 692.65625,
+            "right": 728,
+            "bottom": 752.65625,
+            "left": 269
+          },
+          "label": {
+            "x": 287,
+            "y": 717.65625,
+            "width": 100.78125,
+            "height": 10,
+            "top": 717.65625,
+            "right": 387.78125,
+            "bottom": 727.65625,
+            "left": 287
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(24, 21, 18)",
+            "borderRight": "0px none rgb(24, 21, 18)",
+            "borderBottom": "0px none rgb(24, 21, 18)",
+            "borderLeft": "0px none rgb(24, 21, 18)",
+            "backgroundColor": "rgb(201, 152, 105)",
+            "color": "rgb(24, 21, 18)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 269,
+                "y": 245.65625,
+                "width": 459,
+                "height": 66,
+                "top": 245.65625,
+                "right": 728,
+                "bottom": 311.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 269,
+                "y": 311.65625,
+                "width": 459,
+                "height": 66,
+                "top": 311.65625,
+                "right": 728,
+                "bottom": 377.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 269,
+                "y": 377.65625,
+                "width": 459,
+                "height": 66,
+                "top": 377.65625,
+                "right": 728,
+                "bottom": 443.65625,
+                "left": 269
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "18px",
+                "paddingBottom": "0px",
+                "paddingLeft": "18px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "16.8px",
+                "letterSpacing": "0.49px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 768,
+          "width": 768
+        }
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "actual HTML language attribute remains unchanged",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "baseline valid request mocked locally",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "currentColor follows submit text during rest",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "currentColor follows submit text during hover",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "currentColor follows submit text during focus",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "empty required form blocks submission",
+      "passed": true
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "valid mocked payload exactly matches v16 baseline or verified local result",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        },
+        "expected": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "all write requests intercepted locally",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "profile": "ru-768x1024",
+      "name": "no candidate or baseline JavaScript/resource errors",
+      "passed": true,
+      "detail": {
+        "page": [],
+        "network": [],
+        "baseline": [],
+        "baselineNetwork": []
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "exact frozen candidate HTML loads",
+      "passed": true,
+      "detail": {
+        "file": "vazuri-preview-liko-fashion-studio-public/index.html",
+        "SHA256": "75c59fa95ad7c6cfa8cd47bc6ec243ea10ea6b000e4436deb0bb006f1a43f99d"
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "submit is exactly20x20 and banner exactly24x24",
+      "passed": true,
+      "detail": {
+        "submit": {
+          "x": 328,
+          "y": 775,
+          "width": 20,
+          "height": 20,
+          "top": 775,
+          "right": 348,
+          "bottom": 795,
+          "left": 328
+        },
+        "banner": {
+          "x": 338,
+          "y": 447.609375,
+          "width": 24,
+          "height": 24,
+          "top": 447.609375,
+          "right": 362,
+          "bottom": 471.609375,
+          "left": 338
+        }
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "exact master geometry viewBox rotation shaft and six wing cells",
+      "passed": true,
+      "detail": {
+        "viewBox": "0 0 24 24",
+        "groups": [
+          "rotate(135 11.5 11.5)"
+        ],
+        "parts": [
+          {
+            "tag": "path",
+            "attrs": {
+              "d": "M1 10H22V13H1Z"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "1",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "4",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "7",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "4",
+              "y": "13",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "7",
+              "y": "16",
+              "width": "3",
+              "height": "3"
+            }
+          },
+          {
+            "tag": "rect",
+            "attrs": {
+              "x": "10",
+              "y": "19",
+              "width": "3",
+              "height": "3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "normalized rendered pixel mask exactly equals the banner arrow",
+      "passed": true,
+      "detail": {
+        "submit": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "banner": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad"
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "submit pieces visible static when banner aside is closed",
+      "passed": true,
+      "detail": [
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        },
+        {
+          "opacity": "1",
+          "animation": "none",
+          "transform": "none",
+          "fill": "rgb(238, 227, 211)",
+          "stroke": "none",
+          "filter": "none"
+        }
+      ]
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "arrow centered vertically and inside exact right padding",
+      "passed": true,
+      "detail": {
+        "icon": {
+          "x": 328,
+          "y": 775,
+          "width": 20,
+          "height": 20,
+          "top": 775,
+          "right": 348,
+          "bottom": 795,
+          "left": 328
+        },
+        "button": {
+          "x": 24,
+          "y": 746,
+          "width": 342,
+          "height": 78,
+          "top": 746,
+          "right": 366,
+          "bottom": 824,
+          "left": 24
+        },
+        "pad": 18,
+        "border": 0
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "four required controls and localization unchanged",
+      "passed": true,
+      "detail": [
+        "name",
+        "phone",
+        "contact",
+        "consent"
+      ]
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "baseline route loads",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "banner geometry and normalized raster unchanged from v16",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "baseline form DOM exact except the submit icon",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "form drawer button label and field geometry/styles unchanged",
+      "passed": true,
+      "detail": {
+        "before": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 24,
+            "y": 260,
+            "width": 342,
+            "height": 564,
+            "top": 260,
+            "right": 366,
+            "bottom": 824,
+            "left": 24
+          },
+          "drawer": {
+            "x": 0,
+            "y": 47.125,
+            "width": 390,
+            "height": 796.875,
+            "top": 47.125,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          },
+          "button": {
+            "x": 24,
+            "y": 746,
+            "width": 342,
+            "height": 78,
+            "top": 746,
+            "right": 366,
+            "bottom": 824,
+            "left": 24
+          },
+          "label": {
+            "x": 42,
+            "y": 780,
+            "width": 100.78125,
+            "height": 10,
+            "top": 780,
+            "right": 142.78125,
+            "bottom": 790,
+            "left": 42
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(238, 227, 211)",
+            "borderRight": "0px none rgb(238, 227, 211)",
+            "borderBottom": "0px none rgb(238, 227, 211)",
+            "borderLeft": "0px none rgb(238, 227, 211)",
+            "backgroundColor": "rgb(24, 21, 18)",
+            "color": "rgb(238, 227, 211)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 24,
+                "y": 261,
+                "width": 342,
+                "height": 66,
+                "top": 261,
+                "right": 366,
+                "bottom": 327,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 24,
+                "y": 327,
+                "width": 342,
+                "height": 66,
+                "top": 327,
+                "right": 366,
+                "bottom": 393,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 24,
+                "y": 393,
+                "width": 342,
+                "height": 66,
+                "top": 393,
+                "right": 366,
+                "bottom": 459,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 390,
+          "width": 390
+        },
+        "after": {
+          "htmlLanguage": "en",
+          "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+          "form": {
+            "x": 24,
+            "y": 260,
+            "width": 342,
+            "height": 564,
+            "top": 260,
+            "right": 366,
+            "bottom": 824,
+            "left": 24
+          },
+          "drawer": {
+            "x": 0,
+            "y": 47.125,
+            "width": 390,
+            "height": 796.875,
+            "top": 47.125,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          },
+          "button": {
+            "x": 24,
+            "y": 746,
+            "width": 342,
+            "height": 78,
+            "top": 746,
+            "right": 366,
+            "bottom": 824,
+            "left": 24
+          },
+          "label": {
+            "x": 42,
+            "y": 780,
+            "width": 100.78125,
+            "height": 10,
+            "top": 780,
+            "right": 142.78125,
+            "bottom": 790,
+            "left": 42
+          },
+          "buttonCSS": {
+            "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+            "fontSize": "10px",
+            "fontWeight": "700",
+            "lineHeight": "10px",
+            "letterSpacing": "0.8px",
+            "paddingTop": "0px",
+            "paddingRight": "18px",
+            "paddingBottom": "0px",
+            "paddingLeft": "18px",
+            "borderTop": "0px none rgb(238, 227, 211)",
+            "borderRight": "0px none rgb(238, 227, 211)",
+            "borderBottom": "0px none rgb(238, 227, 211)",
+            "borderLeft": "0px none rgb(238, 227, 211)",
+            "backgroundColor": "rgb(24, 21, 18)",
+            "color": "rgb(238, 227, 211)"
+          },
+          "fields": [
+            {
+              "box": {
+                "x": 24,
+                "y": 261,
+                "width": 342,
+                "height": 66,
+                "top": 261,
+                "right": 366,
+                "bottom": 327,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "name"
+            },
+            {
+              "box": {
+                "x": 24,
+                "y": 327,
+                "width": 342,
+                "height": 66,
+                "top": 327,
+                "right": 366,
+                "bottom": 393,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "phone"
+            },
+            {
+              "box": {
+                "x": 24,
+                "y": 393,
+                "width": 342,
+                "height": 66,
+                "top": 393,
+                "right": 366,
+                "bottom": 459,
+                "left": 24
+              },
+              "css": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "normal",
+                "paddingTop": "0px",
+                "paddingRight": "16px",
+                "paddingBottom": "0px",
+                "paddingLeft": "16px",
+                "borderTop": "0px solid rgb(24, 21, 18)",
+                "borderRight": "0px solid rgb(24, 21, 18)",
+                "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+                "borderLeft": "0px solid rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "inputCSS": {
+                "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "lineHeight": "14.4px",
+                "letterSpacing": "0.42px",
+                "paddingTop": "0px",
+                "paddingRight": "0px",
+                "paddingBottom": "0px",
+                "paddingLeft": "0px",
+                "borderTop": "0px none rgb(24, 21, 18)",
+                "borderRight": "0px none rgb(24, 21, 18)",
+                "borderBottom": "0px none rgb(24, 21, 18)",
+                "borderLeft": "0px none rgb(24, 21, 18)",
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "color": "rgb(24, 21, 18)"
+              },
+              "name": "contact"
+            }
+          ],
+          "required": [
+            "name",
+            "phone",
+            "contact",
+            "consent"
+          ],
+          "buttonText": "Отправить запрос",
+          "docWidth": 390,
+          "width": 390
+        }
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "actual HTML language attribute remains unchanged",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "baseline valid request mocked locally",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "currentColor follows submit text during rest",
+      "passed": true,
+      "detail": {
+        "text": "rgb(238, 227, 211)",
+        "fill": "rgb(238, 227, 211)",
+        "pieces": [
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)",
+          "rgb(238, 227, 211)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "currentColor follows submit text during hover",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "currentColor follows submit text during focus",
+      "passed": true,
+      "detail": {
+        "text": "rgb(24, 21, 18)",
+        "fill": "rgb(24, 21, 18)",
+        "pieces": [
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)",
+          "rgb(24, 21, 18)"
+        ]
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "empty required form blocks submission",
+      "passed": true
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "valid mocked payload exactly matches v16 baseline or verified local result",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        },
+        "expected": {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "all write requests intercepted locally",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "profile": "ru-390x844",
+      "name": "no candidate or baseline JavaScript/resource errors",
+      "passed": true,
+      "detail": {
+        "page": [],
+        "network": [],
+        "baseline": [],
+        "baselineNetwork": []
+      }
+    }
+  ],
+  "failures": [],
+  "results": [
+    {
+      "profile": "ru-1440x900",
+      "url": "http://127.0.0.1:4478/altera/",
+      "payloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "baselinePayloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "mockedServicePOSTs": [],
+      "blockedMethods": [],
+      "pageErrors": [],
+      "networkErrors": [],
+      "baselineErrors": [],
+      "baselineNetworkErrors": [],
+      "screenshots": [
+        "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\audit\\form-submit-arrow-20261026\\qa\\altera\\2026-10-26T05-00-56-464Z-89d47b11\\ru-1440x900-button.png"
+      ],
+      "master": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 1380,
+          "y": 614,
+          "width": 24,
+          "height": 24,
+          "top": 614,
+          "right": 1404,
+          "bottom": 638,
+          "left": 1380
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "geometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 941,
+          "y": 273.65625,
+          "width": 459,
+          "height": 508,
+          "top": 273.65625,
+          "right": 1400,
+          "bottom": 781.65625,
+          "left": 941
+        },
+        "drawer": {
+          "x": 900,
+          "y": 0,
+          "width": 540,
+          "height": 900,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900,
+          "left": 900
+        },
+        "button": {
+          "x": 941,
+          "y": 721.65625,
+          "width": 459,
+          "height": 60,
+          "top": 721.65625,
+          "right": 1400,
+          "bottom": 781.65625,
+          "left": 941
+        },
+        "label": {
+          "x": 959,
+          "y": 746.65625,
+          "width": 100.78125,
+          "height": 10,
+          "top": 746.65625,
+          "right": 1059.78125,
+          "bottom": 756.65625,
+          "left": 959
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(238, 227, 211)",
+          "borderRight": "0px none rgb(238, 227, 211)",
+          "borderBottom": "0px none rgb(238, 227, 211)",
+          "borderLeft": "0px none rgb(238, 227, 211)",
+          "backgroundColor": "rgb(24, 21, 18)",
+          "color": "rgb(238, 227, 211)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 941,
+              "y": 274.65625,
+              "width": 459,
+              "height": 66,
+              "top": 274.65625,
+              "right": 1400,
+              "bottom": 340.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 941,
+              "y": 340.65625,
+              "width": 459,
+              "height": 66,
+              "top": 340.65625,
+              "right": 1400,
+              "bottom": 406.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 941,
+              "y": 406.65625,
+              "width": 459,
+              "height": 66,
+              "top": 406.65625,
+              "right": 1400,
+              "bottom": 472.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 1440,
+        "width": 1440
+      },
+      "icon": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 1362,
+          "y": 741.65625,
+          "width": 20,
+          "height": 20,
+          "top": 741.65625,
+          "right": 1382,
+          "bottom": 761.65625,
+          "left": 1362
+        },
+        "fill": "rgb(238, 227, 211)",
+        "color": "rgb(238, 227, 211)"
+      },
+      "baselineMaster": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 1380,
+          "y": 614,
+          "width": 24,
+          "height": 24,
+          "top": 614,
+          "right": 1404,
+          "bottom": 638,
+          "left": 1380
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "baselineGeometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 941,
+          "y": 273.65625,
+          "width": 459,
+          "height": 508,
+          "top": 273.65625,
+          "right": 1400,
+          "bottom": 781.65625,
+          "left": 941
+        },
+        "drawer": {
+          "x": 900,
+          "y": 0,
+          "width": 540,
+          "height": 900,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900,
+          "left": 900
+        },
+        "button": {
+          "x": 941,
+          "y": 721.65625,
+          "width": 459,
+          "height": 60,
+          "top": 721.65625,
+          "right": 1400,
+          "bottom": 781.65625,
+          "left": 941
+        },
+        "label": {
+          "x": 959,
+          "y": 746.65625,
+          "width": 100.78125,
+          "height": 10,
+          "top": 746.65625,
+          "right": 1059.78125,
+          "bottom": 756.65625,
+          "left": 959
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(238, 227, 211)",
+          "borderRight": "0px none rgb(238, 227, 211)",
+          "borderBottom": "0px none rgb(238, 227, 211)",
+          "borderLeft": "0px none rgb(238, 227, 211)",
+          "backgroundColor": "rgb(24, 21, 18)",
+          "color": "rgb(238, 227, 211)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 941,
+              "y": 274.65625,
+              "width": 459,
+              "height": 66,
+              "top": 274.65625,
+              "right": 1400,
+              "bottom": 340.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 941,
+              "y": 340.65625,
+              "width": 459,
+              "height": 66,
+              "top": 340.65625,
+              "right": 1400,
+              "bottom": 406.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 941,
+              "y": 406.65625,
+              "width": 459,
+              "height": 66,
+              "top": 406.65625,
+              "right": 1400,
+              "bottom": 472.65625,
+              "left": 941
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "profile": "ru-768x1024",
+      "url": "http://127.0.0.1:4478/altera/",
+      "payloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "baselinePayloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "mockedServicePOSTs": [],
+      "blockedMethods": [],
+      "pageErrors": [],
+      "networkErrors": [],
+      "baselineErrors": [],
+      "baselineNetworkErrors": [],
+      "screenshots": [
+        "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\audit\\form-submit-arrow-20261026\\qa\\altera\\2026-10-26T05-00-56-464Z-89d47b11\\ru-768x1024-button.png"
+      ],
+      "master": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 708,
+          "y": 713.203125,
+          "width": 24,
+          "height": 24,
+          "top": 713.203125,
+          "right": 732,
+          "bottom": 737.203125,
+          "left": 708
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "geometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 269,
+          "y": 244.65625,
+          "width": 459,
+          "height": 508,
+          "top": 244.65625,
+          "right": 728,
+          "bottom": 752.65625,
+          "left": 269
+        },
+        "drawer": {
+          "x": 228,
+          "y": 0,
+          "width": 540,
+          "height": 1024,
+          "top": 0,
+          "right": 768,
+          "bottom": 1024,
+          "left": 228
+        },
+        "button": {
+          "x": 269,
+          "y": 692.65625,
+          "width": 459,
+          "height": 60,
+          "top": 692.65625,
+          "right": 728,
+          "bottom": 752.65625,
+          "left": 269
+        },
+        "label": {
+          "x": 287,
+          "y": 717.65625,
+          "width": 100.78125,
+          "height": 10,
+          "top": 717.65625,
+          "right": 387.78125,
+          "bottom": 727.65625,
+          "left": 287
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(24, 21, 18)",
+          "borderRight": "0px none rgb(24, 21, 18)",
+          "borderBottom": "0px none rgb(24, 21, 18)",
+          "borderLeft": "0px none rgb(24, 21, 18)",
+          "backgroundColor": "rgb(201, 152, 105)",
+          "color": "rgb(24, 21, 18)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 269,
+              "y": 245.65625,
+              "width": 459,
+              "height": 66,
+              "top": 245.65625,
+              "right": 728,
+              "bottom": 311.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 269,
+              "y": 311.65625,
+              "width": 459,
+              "height": 66,
+              "top": 311.65625,
+              "right": 728,
+              "bottom": 377.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 269,
+              "y": 377.65625,
+              "width": 459,
+              "height": 66,
+              "top": 377.65625,
+              "right": 728,
+              "bottom": 443.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 768,
+        "width": 768
+      },
+      "icon": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 690,
+          "y": 712.65625,
+          "width": 20,
+          "height": 20,
+          "top": 712.65625,
+          "right": 710,
+          "bottom": 732.65625,
+          "left": 690
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "baselineMaster": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 708,
+          "y": 713.203125,
+          "width": 24,
+          "height": 24,
+          "top": 713.203125,
+          "right": 732,
+          "bottom": 737.203125,
+          "left": 708
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "baselineGeometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 269,
+          "y": 244.65625,
+          "width": 459,
+          "height": 508,
+          "top": 244.65625,
+          "right": 728,
+          "bottom": 752.65625,
+          "left": 269
+        },
+        "drawer": {
+          "x": 228,
+          "y": 0,
+          "width": 540,
+          "height": 1024,
+          "top": 0,
+          "right": 768,
+          "bottom": 1024,
+          "left": 228
+        },
+        "button": {
+          "x": 269,
+          "y": 692.65625,
+          "width": 459,
+          "height": 60,
+          "top": 692.65625,
+          "right": 728,
+          "bottom": 752.65625,
+          "left": 269
+        },
+        "label": {
+          "x": 287,
+          "y": 717.65625,
+          "width": 100.78125,
+          "height": 10,
+          "top": 717.65625,
+          "right": 387.78125,
+          "bottom": 727.65625,
+          "left": 287
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(24, 21, 18)",
+          "borderRight": "0px none rgb(24, 21, 18)",
+          "borderBottom": "0px none rgb(24, 21, 18)",
+          "borderLeft": "0px none rgb(24, 21, 18)",
+          "backgroundColor": "rgb(201, 152, 105)",
+          "color": "rgb(24, 21, 18)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 269,
+              "y": 245.65625,
+              "width": 459,
+              "height": 66,
+              "top": 245.65625,
+              "right": 728,
+              "bottom": 311.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 269,
+              "y": 311.65625,
+              "width": 459,
+              "height": 66,
+              "top": 311.65625,
+              "right": 728,
+              "bottom": 377.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 269,
+              "y": 377.65625,
+              "width": 459,
+              "height": 66,
+              "top": 377.65625,
+              "right": 728,
+              "bottom": 443.65625,
+              "left": 269
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "18px",
+              "paddingBottom": "0px",
+              "paddingLeft": "18px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "16.8px",
+              "letterSpacing": "0.49px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 768,
+        "width": 768
+      }
+    },
+    {
+      "profile": "ru-390x844",
+      "url": "http://127.0.0.1:4478/altera/",
+      "payloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "baselinePayloads": [
+        {
+          "source": "case-altera",
+          "language": "ru",
+          "website": "",
+          "name": "QA Demo",
+          "contact": "qa@example.invalid",
+          "company": "",
+          "message": "ALTERA. Запрос: Сайт или цифровой продукт.\nТелефон: +7 999 123-45-67",
+          "consent": "yes"
+        }
+      ],
+      "mockedServicePOSTs": [],
+      "blockedMethods": [],
+      "pageErrors": [],
+      "networkErrors": [],
+      "baselineErrors": [],
+      "baselineNetworkErrors": [],
+      "screenshots": [
+        "C:\\Users\\Степная\\Documents\\ChatGPT\\сайтодел\\audit\\form-submit-arrow-20261026\\qa\\altera\\2026-10-26T05-00-56-464Z-89d47b11\\ru-390x844-button.png"
+      ],
+      "master": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 338,
+          "y": 447.609375,
+          "width": 24,
+          "height": 24,
+          "top": 447.609375,
+          "right": 362,
+          "bottom": 471.609375,
+          "left": 338
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "geometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 24,
+          "y": 260,
+          "width": 342,
+          "height": 564,
+          "top": 260,
+          "right": 366,
+          "bottom": 824,
+          "left": 24
+        },
+        "drawer": {
+          "x": 0,
+          "y": 47.125,
+          "width": 390,
+          "height": 796.875,
+          "top": 47.125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "button": {
+          "x": 24,
+          "y": 746,
+          "width": 342,
+          "height": 78,
+          "top": 746,
+          "right": 366,
+          "bottom": 824,
+          "left": 24
+        },
+        "label": {
+          "x": 42,
+          "y": 780,
+          "width": 100.78125,
+          "height": 10,
+          "top": 780,
+          "right": 142.78125,
+          "bottom": 790,
+          "left": 42
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(238, 227, 211)",
+          "borderRight": "0px none rgb(238, 227, 211)",
+          "borderBottom": "0px none rgb(238, 227, 211)",
+          "borderLeft": "0px none rgb(238, 227, 211)",
+          "backgroundColor": "rgb(24, 21, 18)",
+          "color": "rgb(238, 227, 211)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 24,
+              "y": 261,
+              "width": 342,
+              "height": 66,
+              "top": 261,
+              "right": 366,
+              "bottom": 327,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 24,
+              "y": 327,
+              "width": 342,
+              "height": 66,
+              "top": 327,
+              "right": 366,
+              "bottom": 393,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 24,
+              "y": 393,
+              "width": 342,
+              "height": 66,
+              "top": 393,
+              "right": 366,
+              "bottom": 459,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 390,
+        "width": 390
+      },
+      "icon": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "none",
+            "transform": "none",
+            "fill": "rgb(238, 227, 211)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 328,
+          "y": 775,
+          "width": 20,
+          "height": 20,
+          "top": 775,
+          "right": 348,
+          "bottom": 795,
+          "left": 328
+        },
+        "fill": "rgb(238, 227, 211)",
+        "color": "rgb(238, 227, 211)"
+      },
+      "baselineMaster": {
+        "geometry": {
+          "viewBox": "0 0 24 24",
+          "groups": [
+            "rotate(135 11.5 11.5)"
+          ],
+          "parts": [
+            {
+              "tag": "path",
+              "attrs": {
+                "d": "M1 10H22V13H1Z"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "1",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "4",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "7",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "4",
+                "y": "13",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "7",
+                "y": "16",
+                "width": "3",
+                "height": "3"
+              }
+            },
+            {
+              "tag": "rect",
+              "attrs": {
+                "x": "10",
+                "y": "19",
+                "width": "3",
+                "height": "3"
+              }
+            }
+          ]
+        },
+        "computed": [
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          },
+          {
+            "opacity": "1",
+            "animation": "v2-panel-cube-assemble",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "fill": "rgb(24, 21, 18)",
+            "stroke": "none",
+            "filter": "none"
+          }
+        ],
+        "maskSHA256": "444275f695c7a585929f405a06c7ed1a57d6673f3253842786d87f6cd5de87ad",
+        "rect": {
+          "x": 338,
+          "y": 447.609375,
+          "width": 24,
+          "height": 24,
+          "top": 447.609375,
+          "right": 362,
+          "bottom": 471.609375,
+          "left": 338
+        },
+        "fill": "rgb(24, 21, 18)",
+        "color": "rgb(24, 21, 18)"
+      },
+      "baselineGeometry": {
+        "htmlLanguage": "en",
+        "DOMExceptSubmitIcon": "<form class=\"v2-brief__form\" autocomplete=\"off\" style=\"--v2-form-progress: 0.060;\">\n                <input class=\"v2-brief__trap\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\">\n                <label class=\"v2-brief__field\">\n                  <input name=\"name\" autocomplete=\"off\" autocapitalize=\"words\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Ваше имя\" placeholder=\"Ваше имя\" maxlength=\"120\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\">\n                  <input name=\"phone\" type=\"tel\" inputmode=\"tel\" autocomplete=\"off\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Телефон\" placeholder=\"Телефон\" maxlength=\"40\" required=\"\">\n                </label>\n                <label class=\"v2-brief__field\" style=\"animation-delay:330ms\">\n                  <input name=\"contact\" autocomplete=\"off\" autocapitalize=\"none\" data-1p-ignore=\"\" data-lpignore=\"true\" aria-label=\"Email или Telegram\" placeholder=\"Email или Telegram\" maxlength=\"180\" required=\"\">\n                </label>\n                <fieldset class=\"v2-brief__choices\">\n                  <legend>Что нужно сделать?</legend>\n                  <div class=\"v2-brief__choice-grid\">\n                    <label><input type=\"radio\" name=\"interest\" value=\"Сайт или цифровой продукт\" checked=\"\"><span>Сайт / digital</span></label><label><input type=\"radio\" name=\"interest\" value=\"Бренд и арт-дирекшн\"><span>Бренд / art direction</span></label><label><input type=\"radio\" name=\"interest\" value=\"Интерактивный опыт\"><span>Интерактив</span></label><label><input type=\"radio\" name=\"interest\" value=\"Разбор проекта\"><span>Разбор проекта</span></label>\n                  </div>\n                </fieldset>\n                <label class=\"v2-brief__consent\"><input name=\"consent\" type=\"checkbox\" value=\"yes\" required=\"\"><span>Соглашаюсь на обработку персональных данных</span></label>\n                <button class=\"v2-brief__submit\" type=\"submit\"><span>Отправить запрос</span></button>\n                <p class=\"v2-brief__feedback\" aria-live=\"polite\"></p>\n              </form>",
+        "form": {
+          "x": 24,
+          "y": 260,
+          "width": 342,
+          "height": 564,
+          "top": 260,
+          "right": 366,
+          "bottom": 824,
+          "left": 24
+        },
+        "drawer": {
+          "x": 0,
+          "y": 47.125,
+          "width": 390,
+          "height": 796.875,
+          "top": 47.125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "button": {
+          "x": 24,
+          "y": 746,
+          "width": 342,
+          "height": 78,
+          "top": 746,
+          "right": 366,
+          "bottom": 824,
+          "left": 24
+        },
+        "label": {
+          "x": 42,
+          "y": 780,
+          "width": 100.78125,
+          "height": 10,
+          "top": 780,
+          "right": 142.78125,
+          "bottom": 790,
+          "left": 42
+        },
+        "buttonCSS": {
+          "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+          "fontSize": "10px",
+          "fontWeight": "700",
+          "lineHeight": "10px",
+          "letterSpacing": "0.8px",
+          "paddingTop": "0px",
+          "paddingRight": "18px",
+          "paddingBottom": "0px",
+          "paddingLeft": "18px",
+          "borderTop": "0px none rgb(238, 227, 211)",
+          "borderRight": "0px none rgb(238, 227, 211)",
+          "borderBottom": "0px none rgb(238, 227, 211)",
+          "borderLeft": "0px none rgb(238, 227, 211)",
+          "backgroundColor": "rgb(24, 21, 18)",
+          "color": "rgb(238, 227, 211)"
+        },
+        "fields": [
+          {
+            "box": {
+              "x": 24,
+              "y": 261,
+              "width": 342,
+              "height": 66,
+              "top": 261,
+              "right": 366,
+              "bottom": 327,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "name"
+          },
+          {
+            "box": {
+              "x": 24,
+              "y": 327,
+              "width": 342,
+              "height": 66,
+              "top": 327,
+              "right": 366,
+              "bottom": 393,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "phone"
+          },
+          {
+            "box": {
+              "x": 24,
+              "y": 393,
+              "width": 342,
+              "height": 66,
+              "top": 393,
+              "right": 366,
+              "bottom": 459,
+              "left": 24
+            },
+            "css": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px",
+              "letterSpacing": "normal",
+              "paddingTop": "0px",
+              "paddingRight": "16px",
+              "paddingBottom": "0px",
+              "paddingLeft": "16px",
+              "borderTop": "0px solid rgb(24, 21, 18)",
+              "borderRight": "0px solid rgb(24, 21, 18)",
+              "borderBottom": "1px solid rgba(23, 27, 29, 0.24)",
+              "borderLeft": "0px solid rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "inputCSS": {
+              "fontFamily": "ui-monospace, SFMono-Regular, \"Cascadia Mono\", Consolas, monospace",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "lineHeight": "14.4px",
+              "letterSpacing": "0.42px",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderTop": "0px none rgb(24, 21, 18)",
+              "borderRight": "0px none rgb(24, 21, 18)",
+              "borderBottom": "0px none rgb(24, 21, 18)",
+              "borderLeft": "0px none rgb(24, 21, 18)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(24, 21, 18)"
+            },
+            "name": "contact"
+          }
+        ],
+        "required": [
+          "name",
+          "phone",
+          "contact",
+          "consent"
+        ],
+        "buttonText": "Отправить запрос",
+        "docWidth": 390,
+        "width": 390
+      }
+    }
+  ]
+}
