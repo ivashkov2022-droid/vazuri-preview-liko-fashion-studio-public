@@ -190,7 +190,7 @@
               <h2 id="v2-brief-title"><span>${escapeHtml(copy.title[0])}</span><span>${escapeHtml(copy.title[1])}</span></h2>
               <p class="v2-brief__lead" id="v2-brief-description"><span class="v2-brief__lead-full">${escapeHtml(copy.lead)}</span><span class="v2-brief__lead-compact">${escapeHtml(copy.leadCompact)}</span></p>
               <form class="v2-brief__form" autocomplete="off">
-                <input name="consent_version" type="hidden" value="2026-10-27">
+                <input name="consent_version" type="hidden" value="2026-10-27-r2">
                 <input class="v2-brief__trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <label class="v2-brief__field">
                   <input name="name" autocomplete="off" autocapitalize="words" data-1p-ignore data-lpignore="true" aria-label="${escapeHtml(copy.namePlaceholder)}" placeholder="${escapeHtml(copy.namePlaceholder)}" maxlength="120" required>
@@ -630,7 +630,7 @@
             company: '',
             message: `${caseName}. ${lang === 'en' ? 'Request' : 'Запрос'}: ${formData.get('interest') || copy.options[0][1]}.\n${copy.phonePlaceholder}: ${phone}`,
             consent: formData.get('consent') || '',
-            consent_version: '2026-10-27',
+            consent_version: '2026-10-27-r2',
           }),
         });
         const payload = await response.json().catch(() => ({ ok: false, code: 'default' }));

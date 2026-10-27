@@ -1,0 +1,26 @@
+{
+  "schema": "vazuri/legal-project-source-package/v1",
+  "id": "altera",
+  "project": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "sourceParent": "d603fc3f71d8facba37f5ec51dfad5df1336ee7a",
+  "ref": "refs/heads/codex/legal-copy-20261027",
+  "baselineRelease": "/srv/www/vazuri.io/releases/20261027T120000Z-legal-documents-v25",
+  "expectedRelease": "/srv/www/vazuri.io/releases/20261027T150000Z-legal-copy-v26",
+  "candidateSHA256": "3c43a74066aed85c1051688fa347c1c67b3b283dc947f1ed19014efcca9b0b8e",
+  "qaSHA256": "2f781cdccc2f055918f49a0f4cafb35f84a58e257ba0b047d3d671101efbe951",
+  "sourceSHA256": {
+    "public/vazuri-case-dock.js": "7b5d6296b5f2d61f8642dfab580eba685fccdd3ce00f07139d1ccd2a24cce3da",
+    "app/layout.tsx": "ba784d57b9ffc2e3c17e02ec2ba71625e2389b77051006455973567a9cbc8c2e"
+  },
+  "ownedRuntimePaths": [
+    "vazuri-preview-liko-fashion-studio-public/index.html",
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js"
+  ],
+  "runtimeOwnership": "Owned subset only; the ten disjoint subsets union to the shared candidate.",
+  "protectedTrackedCount": 0,
+  "originalSnapshotTrackedCount": 0,
+  "cleanWindowsLongpathRows": {},
+  "allOriginalRowsRetainByteGuards": true,
+  "protectedUntrackedCount": 6,
+  "privateOriginalContractIncluded": false
+}
