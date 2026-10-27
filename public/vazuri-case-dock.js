@@ -1,6 +1,20 @@
 (() => {
   'use strict';
 
+  async function requestFormToken(source) {
+    const response = await fetch('/lead.php?action=form-token&source=' + encodeURIComponent(source), {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+      cache: 'no-store',
+      credentials: 'omit',
+    });
+    const payload = await response.json();
+    if (!response.ok || !payload || payload.ok !== true || typeof payload.token !== 'string' || payload.token.length < 32 || payload.token.length > 2048) {
+      throw new Error('send_failed');
+    }
+    return payload.token;
+  }
+
   const script = document.currentScript || document.querySelector('script[data-vazuri-dock]');
   if (!script) return;
 
@@ -615,6 +629,7 @@
       submitLabel.textContent = copy.sending;
       feedback.textContent = '';
       try {
+        const formToken = await requestFormToken(source);
         const response = await fetch('/lead.php', {
           method: 'POST',
           headers: {
@@ -622,6 +637,7 @@
             Accept: 'application/json',
           },
           body: JSON.stringify({
+            form_token: formToken,
             source,
             language: lang,
             website: formData.get('website') || '',
