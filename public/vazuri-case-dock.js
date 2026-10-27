@@ -190,6 +190,7 @@
               <h2 id="v2-brief-title"><span>${escapeHtml(copy.title[0])}</span><span>${escapeHtml(copy.title[1])}</span></h2>
               <p class="v2-brief__lead" id="v2-brief-description"><span class="v2-brief__lead-full">${escapeHtml(copy.lead)}</span><span class="v2-brief__lead-compact">${escapeHtml(copy.leadCompact)}</span></p>
               <form class="v2-brief__form" autocomplete="off">
+                <input name="consent_version" type="hidden" value="2026-10-27">
                 <input class="v2-brief__trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <label class="v2-brief__field">
                   <input name="name" autocomplete="off" autocapitalize="words" data-1p-ignore data-lpignore="true" aria-label="${escapeHtml(copy.namePlaceholder)}" placeholder="${escapeHtml(copy.namePlaceholder)}" maxlength="120" required>
@@ -206,7 +207,7 @@
                     ${copy.options.map(([label, value], index) => `<label><input type="radio" name="interest" value="${escapeHtml(value)}" ${index === 0 ? 'checked' : ''}><span>${escapeHtml(label)}</span></label>`).join('')}
                   </div>
                 </fieldset>
-                <label class="v2-brief__consent"><input name="consent" type="checkbox" value="yes" required><span>${escapeHtml(copy.consent)}</span></label>
+                <label class="v2-brief__consent"><input name="consent" type="checkbox" value="yes" required><span><a href="https://vazuri.io${lang === 'en' ? '/en/consent' : '/consent'}" target="_blank" rel="noopener noreferrer" style="color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px">${escapeHtml(copy.consent)}</a></span></label>
                 <button class="v2-brief__submit" type="submit"><span>${escapeHtml(copy.submit)}</span>${panelArrow(true).replace('class="v2-console__pixel-arrow"', 'class="v2-brief__submit-arrow" style="display:block;flex:0 0 20px;width:20px;height:20px;fill:currentColor;shape-rendering:geometricPrecision;pointer-events:none"')}</button>
                 <p class="v2-brief__feedback" aria-live="polite"></p>
               </form>
@@ -629,6 +630,7 @@
             company: '',
             message: `${caseName}. ${lang === 'en' ? 'Request' : 'Запрос'}: ${formData.get('interest') || copy.options[0][1]}.\n${copy.phonePlaceholder}: ${phone}`,
             consent: formData.get('consent') || '',
+            consent_version: '2026-10-27',
           }),
         });
         const payload = await response.json().catch(() => ({ ok: false, code: 'default' }));

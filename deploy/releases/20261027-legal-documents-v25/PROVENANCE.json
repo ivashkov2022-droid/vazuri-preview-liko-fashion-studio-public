@@ -1,0 +1,26 @@
+{
+  "schema": "vazuri/legal-project-source-package/v1",
+  "id": "altera",
+  "project": "projects/altera-concept-public/vazuri-preview-liko-fashion-studio-public-main",
+  "sourceParent": "6edc39c436bfd7e403f9e40e692e0cdde475e6a7",
+  "ref": "refs/heads/codex/legal-documents-20261027",
+  "baselineRelease": "/srv/www/vazuri.io/releases/20261026T190000Z-social-form-profiles-v24",
+  "expectedRelease": "/srv/www/vazuri.io/releases/20261027T120000Z-legal-documents-v25",
+  "candidateSHA256": "dbe2714bae543f3e8a2b23855cfd8ef71e6c34af5f117bee5a618871f64a42b9",
+  "qaSHA256": "7ed00d8dc0992be55b608d4d6c07a885a79ce60ca890d4ddef80ae2c23b26f8d",
+  "sourceSHA256": {
+    "app/layout.tsx": "adec901fb1220f3a2759f16f73db1c3595ef4f1fc0f9293e5dcaf144386ca70b",
+    "public/vazuri-case-dock.js": "8d02cda66d07ae6cfef5e5cbd14310032202b80fba83272ed36ae0f9d1b36658"
+  },
+  "ownedRuntimePaths": [
+    "vazuri-preview-liko-fashion-studio-public/index.html",
+    "vazuri-preview-liko-fashion-studio-public/vazuri-case-dock.js"
+  ],
+  "runtimeOwnership": "Owned subset only; the ten disjoint subsets union to the shared candidate.",
+  "protectedTrackedCount": 0,
+  "originalSnapshotTrackedCount": 0,
+  "cleanWindowsLongpathRows": {},
+  "allOriginalRowsRetainByteGuards": true,
+  "protectedUntrackedCount": 6,
+  "privateOriginalContractIncluded": false
+}

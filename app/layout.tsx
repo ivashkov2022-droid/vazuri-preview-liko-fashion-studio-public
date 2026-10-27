@@ -3,7 +3,7 @@ import "./globals.css";
 
 const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const dockCssVersion = "family-v13-afdbc8887b76";
-const dockJsVersion = "submit-arrow-v17-b10c548efb52";
+const dockJsVersion = "legal-v25-8d02cda66d07";
 
 const siteUrl = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
